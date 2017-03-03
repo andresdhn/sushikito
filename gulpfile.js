@@ -23,11 +23,14 @@ var gulp = require('gulp'),
 // ==============================================================
 
 var input = {
-	sass: './src/**/*.{scss,sass}'
+	sass: './src/**/*.{scss,sass}',
+	js: './src/**/*.js'
 }
 
 var output = {
-	build: './build/'
+	js: './js/',
+	css: './css/', 
+	img: './img/' 
 }
 
 // ==============================================================
@@ -38,7 +41,7 @@ gulp.task('sass', function () {
 	return gulp
 		.src (input.sass)
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest(output.build)); 
+		.pipe(gulp.dest(output.css)); 
 }); 
 
 // ==============================================================

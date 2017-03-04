@@ -1,0 +1,1 @@
+$(document).ready(function(){var g=["./img/bg.jpg","./img/bg2.jpg","./img/bg3.jpg","./img/bg4.jpg","./img/bg5.jpg","./img/bg6.jpg"],e=0;setInterval(function(){$(".wrap").css({background:"url("+g[e]+") no-repeat center center fixed"}),e+=1,e==g.length&&(e=0)},4e3)});

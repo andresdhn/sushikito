@@ -15,16 +15,19 @@
 // Dependencies 
 // ==============================================================
 
-var gulp = require('gulp'),
-	sass = require('gulp-sass'); 
+var gulp 			= require('gulp'),
+	sass 			= require('gulp-sass'),
+	uglify			= require('gulp-uglify'),
+    autoPrefixer 	= require('gulp-autoprefixer');
+
 
 // ==============================================================
 // Config
 // ==============================================================
 
 var input = {
-	sass: './src/**/*.{scss,sass}',
-	js: './src/**/*.js'
+	sass: './src/styles/*.{scss,sass}',
+	js: './src/javascript/*.js'
 }
 
 var output = {
@@ -33,6 +36,7 @@ var output = {
 	img: './img/' 
 }
 
+var sassOption = {outputStyle: 'compressed'}
 // ==============================================================
 // Sass
 // ==============================================================
@@ -40,10 +44,21 @@ var output = {
 gulp.task('sass', function () {
 	return gulp
 		.src (input.sass)
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass(sassOption).on('error', sass.logError))
+		.pipe(autoPrefixer())
 		.pipe(gulp.dest(output.css)); 
 }); 
 
+// ==============================================================
+// Javascript
+// ==============================================================
+
+gulp.task('javascript', function () {
+	return gulp
+		.src (input.js)
+		.pipe(uglify())
+		.pipe(gulp.dest(output.js)); 
+}); 
 
 // ==============================================================
 // Watch
@@ -51,10 +66,11 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function() {
 	gulp.watch(input.sass, ['sass']);
+	gulp.watch(input.js, ['javascript']);
 });
 
 // ==============================================================
 // Default
 // ==============================================================
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'javascript']);

@@ -76,3 +76,18 @@ body {
 		background-position: -82px -40px;
 	}
 } 
+
+
+@media screen and (max-width: 599px) {
+	.wrap {
+		background: none !important;  
+	}
+
+	.wrap-content {
+		position: relative; 
+		top: 0;
+	}
+	.call-out {
+		background-color: $color-white;
+	}
+}

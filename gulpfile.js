@@ -44,7 +44,7 @@ var sassOption = {outputStyle: 'compressed'}
 gulp.task('sass', function () {
 	return gulp
 		.src (input.sass)
-		.pipe(sass(sassOption).on('error', sass.logError))
+		.pipe(sass().on('error', sass.logError))
 		.pipe(autoPrefixer())
 		.pipe(gulp.dest(output.css)); 
 }); 

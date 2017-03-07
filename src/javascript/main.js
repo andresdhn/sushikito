@@ -14,23 +14,6 @@
 
 $(document).ready( function () {
 
-	if (document.images) {
-		var img1 = new Image();
-		var img2 = new Image();
-		var img3 = new Image();
-		var img4 = new Image();
-		var img5 = new Image();
-		var img6 = new Image();
-
-		img1.src = './img/bg.jpg';
-		img2.src = './img/bg2.jpg';
-		img3.src = './img/bg3.jpg';
-		img4.src = './img/bg4.jpg';
-		img5.src = './img/bg5.jpg';
-		img6.src = './img/bg6.jpg';
-			
-	}
-
 	var images = [
 	  './img/bg.jpg',
 	  './img/bg2.jpg',
@@ -39,6 +22,11 @@ $(document).ready( function () {
 	  './img/bg5.jpg',
 	  './img/bg6.jpg'
 	]
+
+	// caches images, avoiding white flash between background replacements
+	images.forEach(function(img){
+    	new Image().src = img; 
+    }); 
 
 	var i = 0;
 	setInterval(function() {

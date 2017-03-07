@@ -23,9 +23,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 html {
-  color: #222;
+  color: #222222;
   font-size: 1em;
-  line-height: 1.4; }
+  line-height: 1.1; }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -57,6 +57,7 @@ hr {
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
+ * Update: Make all media elements adjust to parent size
  */
 audio,
 canvas,
@@ -64,7 +65,8 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%; }
 
 /*
  * Remove default fieldset styles.
@@ -92,8 +94,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-img {
-  max-width: 100%; }
+/* ==========================================================================
+   Base
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  font-size: 16px;
+  line-height: 1.1;
+  color: #ffffff; }
+
+.container {
+  margin: 0 auto;
+  max-width: 64rem; }
 
 /* ==========================================================================
    Typogrphy
@@ -105,82 +124,36 @@ a {
     outline: 0 !important; }
 
 /* ==========================================================================
-   Placeholding Page
+   Navbar Component
    ========================================================================== */
-* {
-  margin: 0;
-  padding: 0; }
-
-html,
-body {
-  height: 100%;
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 1.1; }
-
-.wrap {
-  position: relative;
-  display: block;
-  width: 100%;
-  min-height: 100%;
-  overflow-y: auto;
-  background: url(../img/bg.jpg) no-repeat center center fixed;
-  background-size: cover !important;
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear; }
-
-.wrap-content {
-  margin-top: 10%;
   height: auto;
-  padding-bottom: 17.6px; }
+  background-color: #171717;
+  border-bottom: 1px solid #333333; }
+  #navigation .navbar {
+    width: 100%;
+    height: 70.4px; }
 
-.call-out {
-  max-width: 37.5rem;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-image: url(../img/mosaic2.jpg);
-  background-position: top left;
-  background-repeat: repeat-x; }
-  .call-out .call-out-container {
-    padding: 5rem 2rem 2rem;
-    text-align: center;
-    color: #000000; }
-  .call-out p {
-    margin-top: 1rem; }
-
-.container {
-  margin: 0 auto;
-  max-width: 51.2rem; }
-
-.icon {
-  display: inline-block;
-  height: 27px;
-  width: 25px;
-  margin: 0 0.25rem;
-  background: url(../img/social-sprite.png) no-repeat; }
-  .icon.icon-facebook {
-    background-position: -44px -40px; }
-  .icon.icon-insta {
-    background-position: -82px -40px; }
-
-#footer {
+.navbar {
   position: relative;
-  width: 100%;
-  text-align: center;
-  margin-top: -17.6px;
-  /* negative value of footer height */
-  height: 17.6px;
-  clear: both; }
-
-@media screen and (max-width: 599px) {
-  .wrap {
-    background: none !important; }
-  .wrap-content {
-    margin-top: 0; }
-  .call-out {
-    background-color: #ffffff; } }
+  text-align: right; }
+  .navbar ul {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: auto;
+    display: table;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .navbar ul li {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0 17.6px; }
 
 /* ==========================================================================
    Helper classes

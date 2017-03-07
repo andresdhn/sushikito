@@ -4,5 +4,22 @@
    ========================================================================== */
 
 $color-black: #000000;
-$color-white: #ffffff; 
+$color-black-90: #171717; 
+$color-black-80: #333333; 
+
+$color-white: #ffffff;
+$color-gray: #cccccc;  
+
+$color-text: #222222; 
 $color-brand-red: #E32016; 
+
+
+$base-unite-size: 16; 
+$base-font-size: ($base-unite-size * 1px); 
+$line-height: 1.1; 
+
+$space: ($base-unite-size * $line-height) * 1px;
+$space--X2: ($space * 2); 
+$space--X3: ($space * 3); 
+$space--X4: ($space * 4); 
+$space--X5: ($space * 5); 

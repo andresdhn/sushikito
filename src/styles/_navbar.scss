@@ -1,0 +1,39 @@
+
+/* ==========================================================================
+   Navbar Component
+   ========================================================================== */
+#navigation {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: auto; 
+	background-color: $color-black-90; 
+	border-bottom: 1px solid $color-black-80;
+
+	.navbar {
+		width: 100%; 
+		height: $space--X4; 
+	}
+}
+
+.navbar {
+	position: relative; 
+	text-align: right; 
+
+	ul {
+		position: absolute; 
+		top: 50%; 
+		left: 0; 
+		width: auto; 
+		display: table; 
+		transform: translateY(-50%); 
+		
+		li {
+			display: table-cell;
+			vertical-align: middle; 
+			text-align: center; 
+			padding: 0 $space; 
+		}
+	}
+}

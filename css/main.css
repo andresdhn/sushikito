@@ -13,6 +13,18 @@
 /* ==========================================================================
    Settings
    ========================================================================== */
+/*
+ * @include-media Beakpoints Map
+ */
+/*
+ * Color settings
+ */
+/*
+ * Keeps $space relative to Font-size
+ */
+/*
+ * $space units
+ */
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -112,6 +124,7 @@ body {
 
 .container {
   margin: 0 auto;
+  padding: 0 17.6px;
   max-width: 64rem; }
 
 /* ==========================================================================
@@ -135,25 +148,31 @@ a {
   background-color: #171717;
   border-bottom: 1px solid #333333; }
   #navigation .navbar {
+    position: relative;
     width: 100%;
     height: 70.4px; }
 
-.navbar {
-  position: relative;
-  text-align: right; }
-  .navbar ul {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: auto;
-    display: table;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
-    .navbar ul li {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      padding: 0 17.6px; }
+.navbar > * {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.navbar .brand {
+  left: 0; }
+
+.navbar .nav {
+  right: 0;
+  width: auto;
+  display: none; }
+  .navbar .nav li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 17.6px; }
+  @media (min-width: 601px) {
+    .navbar .nav {
+      display: table; } }
 
 /* ==========================================================================
    Helper classes

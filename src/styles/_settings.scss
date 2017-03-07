@@ -3,6 +3,21 @@
    Settings
    ========================================================================== */
 
+/*
+ * @include-media Beakpoints Map
+ */
+
+$breakpoints: (
+	xs: 600px, 
+	sm: 900px, 
+	md: 1024px, 
+	lg: 1700px
+);
+
+/*
+ * Color settings
+ */
+
 $color-black: #000000;
 $color-black-90: #171717; 
 $color-black-80: #333333; 
@@ -13,10 +28,17 @@ $color-gray: #cccccc;
 $color-text: #222222; 
 $color-brand-red: #E32016; 
 
+/*
+ * Keeps $space relative to Font-size
+ */
 
 $base-unite-size: 16; 
 $base-font-size: ($base-unite-size * 1px); 
 $line-height: 1.1; 
+
+/*
+ * $space units
+ */
 
 $space: ($base-unite-size * $line-height) * 1px;
 $space--X2: ($space * 2); 

@@ -19,6 +19,7 @@ body {
 }
 
 .container {
-	margin: 0 auto; 
+	margin: 0 auto;
+	padding: 0 $space; 
 	max-width: 64rem; 
 }

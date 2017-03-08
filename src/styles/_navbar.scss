@@ -27,7 +27,13 @@
 	}
 
 	.brand {
-		left: 0;
+		width: 100%; 
+		text-align: center; 
+
+		@include media('>xs'){
+			width: auto; 
+			left: 0;
+		}
 	}
 
 	.nav {

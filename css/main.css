@@ -159,7 +159,12 @@ a {
           transform: translateY(-50%); }
 
 .navbar .brand {
-  left: 0; }
+  width: 100%;
+  text-align: center; }
+  @media (min-width: 601px) {
+    .navbar .brand {
+      width: auto;
+      left: 0; } }
 
 .navbar .nav {
   right: 0;

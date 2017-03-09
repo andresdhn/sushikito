@@ -180,6 +180,49 @@ a {
       display: table; } }
 
 /* ==========================================================================
+   Header component
+   ========================================================================== */
+#header {
+  background: transparent; }
+  #header.header-hero .header-ratio {
+    padding-bottom: 100%; }
+
+@media (min-width: 601px) and (max-width: 900px) {
+  #header.header-hero .header-ratio {
+    padding-bottom: 75%; } }
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  #header.header-hero .header-ratio {
+    padding-bottom: 50%; } }
+    @media (min-width: 1025px) {
+      #header.header-hero .header-ratio {
+        padding-bottom: 25%; } }
+
+/* ==========================================================================
+   Spacers
+   ========================================================================== */
+.ratio--4by1 {
+  padding-bottom: 25%; }
+
+.ratio--3by1 {
+  padding-bottom: 33.33333333333333%; }
+
+.ratio--2by1 {
+  padding-bottom: 50%; }
+
+.ratio--16by9 {
+  padding-bottom: 56.25%; }
+
+.ratio--3by2 {
+  padding-bottom: 66.66666666666667%; }
+
+.ratio--4by3 {
+  padding-bottom: 75%; }
+
+.ratio--full {
+  padding-bottom: 100%; }
+
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 /*

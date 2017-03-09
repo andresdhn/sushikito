@@ -1,0 +1,24 @@
+
+/* ==========================================================================
+   Header component
+   ========================================================================== */
+
+#header {
+	background: transparent; 
+
+	&.header-hero{
+		.header-ratio{
+			padding-bottom: 100%;
+
+			@include media ('>xs', '<=sm'){
+				padding-bottom: 75%;
+			}
+			@include media ('>sm', '<=md'){
+				padding-bottom: 50%;
+			}
+			@include media ('>md'){
+				padding-bottom: 25%;
+			}
+		}	
+	}
+}

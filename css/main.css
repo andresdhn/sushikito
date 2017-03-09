@@ -35,9 +35,10 @@
    Base styles: opinionated defaults
    ========================================================================== */
 html {
-  color: #ffffff;
+  background: transparent;
   font-size: 1em;
-  line-height: 1.1; }
+  line-height: 1.1;
+  color: #333333; }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -117,10 +118,14 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #000000;
   font-size: 16px;
   line-height: 1.1;
   color: #ffffff; }
+
+#navigation,
+#content,
+#footer {
+  background-color: #000000; }
 
 .container {
   margin: 0 auto;
@@ -145,7 +150,6 @@ a {
   left: 0;
   width: 100%;
   height: auto;
-  background-color: #000000;
   border-bottom: 1px solid #333333; }
   #navigation .navbar {
     position: relative;
@@ -191,11 +195,11 @@ a {
   #header.header-hero .header-ratio {
     padding-bottom: 75%; } }
 
-@media (min-width: 901px) and (max-width: 1024px) {
+@media (min-width: 901px) and (max-width: 1200px) {
   #header.header-hero .header-ratio {
     padding-bottom: 50%; } }
 
-@media (min-width: 1025px) and (max-width: 1700px) {
+@media (min-width: 1201px) and (max-width: 1700px) {
   #header.header-hero .header-ratio {
     padding-bottom: 33.33333333333333%; } }
     @media (min-width: 1701px) {

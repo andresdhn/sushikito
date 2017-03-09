@@ -12,10 +12,15 @@ html,
 body {
 	height: 100%; 
 	width: 100%;
-	background-color: $color-background; 
 	font-size: $base-font-size;
 	line-height: $line-height;
 	color: $color-text; 
+}
+
+#navigation, 
+#content, 
+#footer {
+	background-color: $color-background; 
 }
 
 .container {
@@ -23,3 +28,4 @@ body {
 	padding: 0 $space; 
 	max-width: 64rem; 
 }
+

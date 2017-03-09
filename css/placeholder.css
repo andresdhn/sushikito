@@ -36,10 +36,14 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #000000;
   font-size: 16px;
   line-height: 1.1;
   color: #ffffff; }
+
+#navigation,
+#content,
+#footer {
+  background-color: #000000; }
 
 .container {
   margin: 0 auto;

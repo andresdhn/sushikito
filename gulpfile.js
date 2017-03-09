@@ -56,7 +56,7 @@ gulp.task('sass', function () {
 gulp.task('javascript', function () {
 	return gulp
 		.src (input.js)
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest(output.js)); 
 }); 
 

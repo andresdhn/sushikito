@@ -145,7 +145,7 @@ a {
   left: 0;
   width: 100%;
   height: auto;
-  background-color: #171717;
+  background-color: #000000;
   border-bottom: 1px solid #333333; }
   #navigation .navbar {
     position: relative;
@@ -194,7 +194,11 @@ a {
 @media (min-width: 901px) and (max-width: 1024px) {
   #header.header-hero .header-ratio {
     padding-bottom: 50%; } }
-    @media (min-width: 1025px) {
+
+@media (min-width: 1025px) and (max-width: 1700px) {
+  #header.header-hero .header-ratio {
+    padding-bottom: 33.33333333333333%; } }
+    @media (min-width: 1701px) {
       #header.header-hero .header-ratio {
         padding-bottom: 25%; } }
 

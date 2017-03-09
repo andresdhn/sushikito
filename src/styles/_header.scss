@@ -16,7 +16,10 @@
 			@include media ('>sm', '<=md'){
 				padding-bottom: 50%;
 			}
-			@include media ('>md'){
+			@include media ('>md', '<=lg'){
+				padding-bottom: 33.33333333333333%;
+			}
+			@include media ('>lg'){
 				padding-bottom: 25%;
 			}
 		}	

@@ -17,16 +17,15 @@ $breakpoints: (
 /*
  * Color settings
  */
+$color-white: 		#ffffff;
+$color-gray: 		#cccccc;  
+$color-black: 		#000000;
+$color-black-90: 	#171717; 
+$color-black-80: 	#333333; 
+$color-brand-red: 	#E32016; 
 
-$color-black: #000000;
-$color-black-90: #171717; 
-$color-black-80: #333333; 
-
-$color-white: #ffffff;
-$color-gray: #cccccc;  
-
-$color-text: #222222; 
-$color-brand-red: #E32016; 
+$color-text: 		$color-white; 
+$color-background: 	$color-black; 
 
 /*
  * Keeps $space relative to Font-size

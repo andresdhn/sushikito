@@ -16,16 +16,20 @@
 // ==============================================================
 
 var gulp 			= require('gulp'),
+	gulpif  		= require('gulp-if'),
 	sass 			= require('gulp-sass'),
 	uglify			= require('gulp-uglify'),
 	imagemin		= require('gulp-imagemin'),
     sourceMaps 		= require('gulp-sourcemaps'),
     autoPrefixer 	= require('gulp-autoprefixer');
 
+var args    		= require('yargs').argv; 
 
 // ==============================================================
 // Config
 // ==============================================================
+
+var isProduction = args.env === 'prod';
 
 var inputRoot = './src'; 
 
@@ -40,7 +44,7 @@ var output = {
 	build: 	'./build'
 }
 
-var sassOption = {outputStyle: 'compressed'}
+var sassOptions = {outputStyle: 'compressed'}
 
 // ==============================================================
 // Sass
@@ -49,9 +53,17 @@ var sassOption = {outputStyle: 'compressed'}
 gulp.task('sass', function () {
 	return gulp
 		.src (input.sass)
-		.pipe(sourceMaps.init())
-		.pipe(sourceMaps.write())
-		.pipe(sass().on('error', sass.logError))
+		.pipe(
+			gulpif(!isProduction, sourceMaps.init())
+		)
+		.pipe(
+			gulpif(!isProduction, sourceMaps.write())
+		)
+		.pipe(
+			sass(
+				gulpif(isProduction, sassOptions)
+			).on('error', sass.logError)
+		)
 		.pipe(autoPrefixer())
 		.pipe(gulp.dest(output.build)); 
 }); 
@@ -63,7 +75,9 @@ gulp.task('sass', function () {
 gulp.task('javascript', function () {
 	return gulp
 		.src (input.js)
-		.pipe(uglify())
+		.pipe(
+			gulpif(isProduction, uglify())
+		)
 		.pipe(gulp.dest(output.build)); 
 }); 
 
@@ -74,7 +88,9 @@ gulp.task('javascript', function () {
 gulp.task('images', function(){
 	return gulp
 		.src(input.img)
-		.pipe(imagemin())
+		.pipe(
+			gulpif(isProduction, imagemin())
+		)
 		.pipe(gulp.dest(output.build));
 });
 

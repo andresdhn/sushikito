@@ -23,8 +23,9 @@ var gulp 			= require('gulp'),
     sourceMaps 		= require('gulp-sourcemaps'),
     autoPrefixer 	= require('gulp-autoprefixer');
 
-var args    		= require('yargs').argv; 
-
+var panini 			= require('panini'),
+	args    		= require('yargs').argv; 
+	
 // ==============================================================
 // Config
 // ==============================================================
@@ -35,7 +36,7 @@ var inputRoot = './src';
 
 var input = {
 	js: 	inputRoot + '/**/*.js',
-	html: 	inputRoot + '/**/*.html',
+	html: 	inputRoot + '/html/pages/*.html',
 	sass: 	inputRoot + '/**/*.{scss,sass}',	
 	img: 	inputRoot + '/**/*.{png,jpg,jpeg,svg,gif}'
 }
@@ -93,6 +94,22 @@ gulp.task('images', function(){
 		)
 		.pipe(gulp.dest(output.build));
 });
+
+// ======================================================================
+// HTML
+// ======================================================================
+	gulp.task('panini', function() {
+		gulp.src(input.html)
+	    	.pipe( 
+	    		panini({
+		    		root: inputRoot + '/html/pages',
+			    	layouts: inputRoot + '/html/layouts',
+			    	partials: inputRoot + '/html/partials'
+		    	})
+		    )
+	    	.pipe(gulp.dest(output.build));
+	});
+
 
 // ==============================================================
 // Watch

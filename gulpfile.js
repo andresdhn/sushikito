@@ -18,6 +18,8 @@
 var gulp 			= require('gulp'),
 	sass 			= require('gulp-sass'),
 	uglify			= require('gulp-uglify'),
+	imagemin		= require('gulp-imagemin'),
+    sourceMaps 		= require('gulp-sourcemaps'),
     autoPrefixer 	= require('gulp-autoprefixer');
 
 
@@ -25,18 +27,21 @@ var gulp 			= require('gulp'),
 // Config
 // ==============================================================
 
+var inputRoot = './src'; 
+
 var input = {
-	sass: './src/styles/*.{scss,sass}',
-	js: './src/javascript/*.js'
+	js: 	inputRoot + '/**/*.js',
+	html: 	inputRoot + '/**/*.html',
+	sass: 	inputRoot + '/**/*.{scss,sass}',	
+	img: 	inputRoot + '/**/*.{png,jpg,jpeg,svg,gif}'
 }
 
 var output = {
-	js: './js/',
-	css: './css/', 
-	img: './img/' 
+	build: 	'./build'
 }
 
 var sassOption = {outputStyle: 'compressed'}
+
 // ==============================================================
 // Sass
 // ==============================================================
@@ -44,9 +49,11 @@ var sassOption = {outputStyle: 'compressed'}
 gulp.task('sass', function () {
 	return gulp
 		.src (input.sass)
+		.pipe(sourceMaps.init())
+		.pipe(sourceMaps.write())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoPrefixer())
-		.pipe(gulp.dest(output.css)); 
+		.pipe(gulp.dest(output.build)); 
 }); 
 
 // ==============================================================
@@ -56,9 +63,20 @@ gulp.task('sass', function () {
 gulp.task('javascript', function () {
 	return gulp
 		.src (input.js)
-		// .pipe(uglify())
-		.pipe(gulp.dest(output.js)); 
+		.pipe(uglify())
+		.pipe(gulp.dest(output.build)); 
 }); 
+
+// ======================================================================
+// Images
+// ======================================================================
+
+gulp.task('images', function(){
+	return gulp
+		.src(input.img)
+		.pipe(imagemin())
+		.pipe(gulp.dest(output.build));
+});
 
 // ==============================================================
 // Watch
@@ -73,4 +91,4 @@ gulp.task('watch', function() {
 // Default
 // ==============================================================
 
-gulp.task('default', ['sass', 'javascript']);
+gulp.task('default', ['sass', 'javascript', 'images']);

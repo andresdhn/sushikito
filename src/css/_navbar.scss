@@ -11,59 +11,52 @@
 	height: auto; 
 	border-bottom: 1px solid $color-black-80;
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-
-	.navbar {
-		position: relative; 
-		width: 100%; 
-		height: $space--X4; 
-	}
 }
 
 .navbar {
-	
-	.brand {
-		position: absolute; 
-		top: 50%; 
-		width: 100%; 
-		text-align: center; 
-		transform: translateY(-50%); 
+	position: relative; 
+	display: table;
+	width: 100%; 
+	height: auto; 
+	min-height: $space--X4; 
+	transition: all 1s linear; 
 
+	> * {
+		width: auto; 
+		display: table-cell; 
+		vertical-align: middle;
+	}
+
+	.brand {
 		@include media('>xs'){
 			width: auto; 
-			left: 0;
+			text-align: left; 
 		}
+
+		text-align: center; 
 	}
 
 	.navbar-nav {
-		position: absolute; 
-		top: 50%; 
-		right: 0;
-		transform: translateY(-50%); 
-		
+		@include media('>xs'){
+			width: 100%; 
+			text-align: right;
+		}
+
+		width: auto; 
+		text-align: center;
 	}
 
 	.nav {
-		display: none; 
-		transition: all 1s ease-out; 
-
-		&.open {
-			position: fixed; 
-			top: 0; 
-			right: 0; 
-			bottom: 0; 
-			left: 0; 
-			display: block; 
-			transform: translateX(0%); 
+		@include media('>xs'){
+			display: block;
 		}
+
+		display: none; 
 
 		li {
 			display: inline-block;
 			text-align: center; 
 			padding: 0 $space; 
-		}
-
-		@include media('>xs'){
-			display: block;
 		}
 	}
 }

@@ -22,9 +22,11 @@
 // components
 @import 'navbar'; 
 @import 'header'; 
+@import 'footer'; 
 @import 'content'; 
 
 // Helpers
 @import 'spacers'; 
-@import 'helpers'; 
+@import 'helpers';
+@import 'responsive';
 @import 'print'; 

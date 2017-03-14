@@ -50,3 +50,7 @@ $(document).ready( function () {
 	}, 6000);
 	
 }); 
+
+$('.toggle-menu').on ('click', function() {
+	$('.navbar .nav').toggleClass('open'); 
+}); 

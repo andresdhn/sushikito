@@ -4,7 +4,13 @@
    ========================================================================== */
 
 #header {
-	background: transparent; 
+	/* The image used */
+    background-image: url("http://placehold.it/1280x720");
+
+    /* Create the parallax scrolling effect */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 	&.header-hero{
 		.header-ratio{

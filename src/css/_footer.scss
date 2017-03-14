@@ -1,12 +1,9 @@
 
 /* ==========================================================================
-   Content component
+   Footer component
    ========================================================================== */
 
-#content {
-	padding: $space--X3 0;
-
-	.content-menu{
-		padding: $space--X3 0;
-	}
+#footer {
+	width: 100%; 
+	text-align: center; 
 }

@@ -12,14 +12,19 @@
  * =====================================================================
  */
 
+// Config 
 @import 'settings'; 
 @import 'node_modules/include-media/dist/_include-media.scss';
 @import 'base.reset'; 
 @import 'base'; 
 @import 'typography';
-// @import 'placehold'; 
+
+// components
 @import 'navbar'; 
 @import 'header'; 
+@import 'content'; 
+
+// Helpers
 @import 'spacers'; 
 @import 'helpers'; 
 @import 'print'; 

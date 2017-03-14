@@ -118,10 +118,11 @@ gulp.task('images', function(){
 gulp.task('watch', function() {
 	gulp.watch(input.sass, ['sass']);
 	gulp.watch(input.js, ['javascript']);
+	gulp.watch(inputRoot + '/**/*.html', ['panini']);
 });
 
 // ==============================================================
 // Default
 // ==============================================================
 
-gulp.task('default', ['sass', 'javascript', 'images']);
+gulp.task('default', ['sass', 'javascript', 'images', 'panini']);

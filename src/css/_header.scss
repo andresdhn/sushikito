@@ -16,17 +16,14 @@
 		.header-ratio{
 			padding-bottom: 100%;
 
-			@include media ('>xs', '<=sm'){
+			@include media ('>xs'){
 				padding-bottom: 75%;
 			}
-			@include media ('>sm', '<=md'){
+			@include media ('>sm'){
 				padding-bottom: 50%;
 			}
-			@include media ('>md', '<=lg'){
-				padding-bottom: 33.33333333333333%;
-			}
 			@include media ('>lg'){
-				padding-bottom: 25%;
+				padding-bottom: 33.33333333333333%;
 			}
 		}	
 	}

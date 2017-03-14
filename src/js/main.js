@@ -51,6 +51,6 @@ $(document).ready( function () {
 	
 }); 
 
-$('.toggle-menu').on ('click', function() {
-	$('.navbar').toggleClass('open'); 
+$('.navbar-toggle').on ('click', function() {
+	$('.navbar-nav .nav').toggleClass('open'); 
 }); 

@@ -17,8 +17,7 @@
 	position: relative; 
 	display: table;
 	width: 100%; 
-	height: auto; 
-	min-height: $space--X4; 
+	height: $space--X4; 
 	transition: all 1s linear; 
 
 	> * {
@@ -27,36 +26,51 @@
 		vertical-align: middle;
 	}
 
-	.brand {
+	.navbar-brand {
 		@include media('>xs'){
-			width: auto; 
-			text-align: left; 
-		}
+			display: block; 
+		}	
 
-		text-align: center; 
+		display: none; 
+	}
+
+	.navbar-toggle {
+		@include media('>xs'){
+			display: none; 
+		}	
+
+		display: block; 
+	}
+
+	.navbar-header{
+		text-align: left; 
 	}
 
 	.navbar-nav {
-		@include media('>xs'){
-			width: 100%; 
-			text-align: right;
-		}
+		text-align: right;
+	}
+}
 
-		width: auto; 
-		text-align: center;
+.nav {
+	@include media('>xs'){
+		display: block;
+		height: auto;
 	}
 
-	.nav {
+	display: none;
+	
+	&.open {
+		display: block; 		
+	}
+
+	li {
 		@include media('>xs'){
-			display: block;
-		}
-
-		display: none; 
-
-		li {
 			display: inline-block;
-			text-align: center; 
 			padding: 0 $space; 
 		}
+
+		display: block;
+		text-align: center; 
+		padding: $space 0; 
 	}
 }

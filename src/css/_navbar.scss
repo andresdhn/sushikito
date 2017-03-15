@@ -31,16 +31,11 @@
 			opacity: 1;
 		}
 
-		.toggle-label {
-			transition: transform .3s ease-out;
-			transition-delay: 0;
+		.toggle-bar-wrap {
 			transform: rotate(90deg);
 		}
 		
 		.toggle-bar {
-			transition: all .3s ease-out;
-			transition-delay: .1s;
-			
 			&:first-of-type{
 				transform: rotate(45deg);
 				transform-origin: 25% 0%;
@@ -90,10 +85,12 @@
 	width: 40px; 
 	padding-left: $space; 
 	
-	.toggle-label {
+	.toggle-bar-wrap {
 		position: absolute;
 		cursor: pointer; 
 		display: block;
+		transition: transform .3s ease-out;
+		transition-delay: 0;
 		transform: rotate(0);
 	}
 
@@ -104,7 +101,9 @@
         margin: 5px 0; 
         border-radius: 1px;
         background-color: $color-text;
-        
+        transition: all .3s ease-out;
+		transition-delay: .1s;
+		transform: rotate(0);
 	}
 }
 

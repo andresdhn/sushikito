@@ -1,0 +1,19 @@
+
+/* ==========================================================================
+   Stripe component
+   ========================================================================== */
+
+.stripe {
+	position: relative; 
+	padding-bottom: 25%; /* 2by1 */
+	background-color: rgba($color-brand-red, 0.8); 
+
+	.stripe-content {
+		position: absolute; 
+		width: 100%; 
+		top: 50%; 
+		transform: translateY(-50%); 
+		text-align: center;
+		color: $color-white;
+	}
+}

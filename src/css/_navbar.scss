@@ -16,6 +16,10 @@ $navbar-z-index: 9;
 	transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
 	z-index: $navbar-z-index; 
 
+	@include media($bp){
+		height: $space--X4 !important;
+	}
+
 	&.open {
 		height: 100%;
 
@@ -44,7 +48,6 @@ $navbar-z-index: 9;
 		position: relative;
 		top: $space--X2; 
 	} 
-
 }
 
 .navbar-brand{
@@ -56,6 +59,7 @@ $navbar-z-index: 9;
 
 	@include media($bp){
 		left: 0;
+		padding-left: $space; 
 		transform: none; 
 	}	
 }
@@ -69,6 +73,8 @@ $navbar-z-index: 9;
 	
 	@include media($bp){
 		visibility: visible;
+		top: $space--X2;
+		text-align: center
 	}	
 
 }
@@ -103,7 +109,6 @@ $navbar-z-index: 9;
 		transform: rotate(0);
 	}
 }
-
 
 .nav {
 	li {

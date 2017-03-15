@@ -1,9 +1,9 @@
 
 /* ==========================================================================
-   Header component
+   Hero component
    ========================================================================== */
 
-#header {
+#hero {
 	/* The image used */
     background-image: url("http://placehold.it/1280x720");
 
@@ -12,8 +12,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-	&.header-hero{
-		.header-ratio{
+	&.hero-header{
+		.hero-ratio{
 			padding-bottom: 100%;
 
 			@include media ('>xs'){

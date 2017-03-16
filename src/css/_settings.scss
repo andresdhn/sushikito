@@ -18,14 +18,18 @@ $breakpoints: (
  * Color settings
  */
 $color-white: 		#ffffff;
-$color-gray: 		#cccccc;  
+
+$color-gray: 		#cccccc;
+$color-gray-dark: 	#999999;
+
 $color-black: 		#000000;
 $color-black-90: 	#171717; 
 $color-black-80: 	#333333; 
+
 $color-brand-red: 	#E32016; 
 
-$color-text: 		$color-black-80; 
-$color-background: 	$color-white; 
+$color-text: 		$color-white; 
+$color-background: 	$color-black-90; 
 
 /*
  * Keeps $space relative to Font-size
@@ -44,3 +48,7 @@ $space--X2: ($space * 2);
 $space--X3: ($space * 3); 
 $space--X4: ($space * 4); 
 $space--X5: ($space * 5); 
+
+@function custom-space($space-unit) {
+	@return ($space * $space-unit);
+}

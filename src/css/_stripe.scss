@@ -17,3 +17,13 @@
 		color: $color-white;
 	}
 }
+
+.stripe-pattern {
+	width: 100%; 
+	background: url('../img/mosaic.jpg') top left; 
+	background-repeat: repeat-x;  
+
+	&.pattern-sm {
+		height: custom-space(1.3295);
+	}
+}

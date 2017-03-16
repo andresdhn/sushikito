@@ -3,7 +3,11 @@
    Footer component
    ========================================================================== */
 
+$footer-text-color: $color-gray-dark;
+
 #footer {
 	width: 100%; 
 	text-align: center; 
+	font-weight: 100;
+	color: $footer-text-color; 
 }

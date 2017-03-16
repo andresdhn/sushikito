@@ -6,11 +6,13 @@
 #hero {
 	/* The image used */
     background-image: url("http://placehold.it/1280x720");
-
-    /* Create the parallax scrolling effect */
+    
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+	background-size: cover;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
 
 	&.hero-header{
 		.hero-ratio{

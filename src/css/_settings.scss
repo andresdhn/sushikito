@@ -52,3 +52,10 @@ $space--X5: ($space * 5);
 @function custom-space($space-unit) {
 	@return ($space * $space-unit);
 }
+
+
+/*
+ * Font Size
+ */
+
+$font-small: ($base-font-size - 4); 

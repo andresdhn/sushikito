@@ -6,8 +6,11 @@
 $footer-text-color: $color-gray-dark;
 
 #footer {
-	width: 100%; 
-	text-align: center; 
+	display: block;
+	padding: $space--X2 0; 
 	font-weight: 100;
+	font-size: $font-small; 
 	color: $footer-text-color; 
+	background-color: $color-black; 
+	text-align: center;
 }

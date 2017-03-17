@@ -18,27 +18,27 @@
 		.menu-header {
 			position: absolute; 
 			top: 50%; 
-			width: 100%; 
+			width: 100%;
 			margin: 0;
 			text-align: center; 
 			transform: translateY(-50%); 
 		}
 
-		&.clasiques{
-			background-image: url('../img/bg2.jpg');
-		}
-		&.sushikito{
-			background-image: url('../img/bg.jpg');
-		}
-		&.sashimi{
-			background-image: url('../img/bg5.jpg');
-		}
-		&.maki{
-			background-image: url('../img/bg4.jpg');
-		}
-		&.burrito{
-			background-image: url('../img/bg6.jpg');
-		}
+		// &.clasiques{
+		// 	background-image: url('../img/bg2.jpg');
+		// }
+		// &.sushikito{
+		// 	background-image: url('../img/bg.jpg');
+		// }
+		// &.sashimi{
+		// 	background-image: url('../img/bg5.jpg');
+		// }
+		// &.maki{
+		// 	background-image: url('../img/bg4.jpg');
+		// }
+		// &.burrito{
+		// 	background-image: url('../img/bg6.jpg');
+		// }
 
 	 	@include media('>xs') {
 			padding-bottom: 33.333333%; 	 		

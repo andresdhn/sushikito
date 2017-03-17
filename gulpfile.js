@@ -24,7 +24,8 @@ var gulp 			= require('gulp'),
     autoPrefixer 	= require('gulp-autoprefixer');
 
 var panini 			= require('panini'),
-	args    		= require('yargs').argv; 
+	args    		= require('yargs').argv, 
+	webpack			= require('webpack-stream'); 
 	
 // ==============================================================
 // Config
@@ -75,11 +76,17 @@ gulp.task('sass', function () {
 
 gulp.task('javascript', function () {
 	return gulp
-		.src (input.js)
+		.src ('./src/js/main.js')
+		.pipe(webpack({
+			entry: './src/js/main.js',
+			output: {
+                 filename: 'main.js'
+            }
+		}))
 		.pipe(
 			gulpif(isProduction, uglify())
 		)
-		.pipe(gulp.dest(output.build)); 
+		.pipe(gulp.dest(output.build + '/js/')); 
 }); 
 
 // ======================================================================

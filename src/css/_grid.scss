@@ -3,5 +3,13 @@
    Grid
    ========================================================================== */
 
-// Dividing the layout in halves and thirds
-@include im-columns(2, 3);
+// Grid class name
+$im-grid-class: 'grid';
+// Cell class name
+$im-grid-cell-class: 'grid-cell';
+// Setting gutters
+// $im-grid-gutter-size: 20px;
+// Optionally include max-width to fix IE issues
+$im-grid-include-max-width: false !default;
+// Generating grid classes for 1, 2 and 3 column layouts
+@include im-grid-columns(1, 2, 3);

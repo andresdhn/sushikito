@@ -12,18 +12,20 @@
  * =====================================================================
  */
 
-// Config 
+// Config & Grid
 @import 'settings'; 
 @import 'include-media';
-@import 'include-media-columns';
+@import 'include-media-grid';
+@import 'grid';
+
 @import 'base.reset'; 
 @import 'base'; 
 @import 'typography';
-@import 'grid';
 
 // components
 @import 'navbar'; 
 @import 'hero'; 
+@import 'menu'; 
 @import 'footer'; 
 @import 'content'; 
 @import 'stripe'; 

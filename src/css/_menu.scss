@@ -1,0 +1,51 @@
+
+/* ==========================================================================
+   Menu components
+   ========================================================================== */
+
+.menu {
+	.menu-category {
+		position: relative; 
+		width: 100%; 
+		height: auto; 
+		padding-bottom: 50%; 
+
+		background-image: url('http://placehold.it/1280x720');
+		background-position: center center; 
+		background-repeat: no-repeat; 
+		background-size: cover; 
+
+		.menu-header {
+			position: absolute; 
+			top: 50%; 
+			width: 100%; 
+			margin: 0;
+			text-align: center; 
+			transform: translateY(-50%); 
+		}
+
+		&.clasiques{
+			background-image: url('../img/bg2.jpg');
+		}
+		&.sushikito{
+			background-image: url('../img/bg.jpg');
+		}
+		&.sashimi{
+			background-image: url('../img/bg5.jpg');
+		}
+		&.maki{
+			background-image: url('../img/bg4.jpg');
+		}
+		&.burrito{
+			background-image: url('../img/bg6.jpg');
+		}
+
+	 	@include media('>xs') {
+			padding-bottom: 33.333333%; 	 		
+	 	}
+
+	 	@include media('>md') {
+			padding-bottom: 25%; 	 		
+	 	}
+	}
+}

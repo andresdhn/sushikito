@@ -2,10 +2,9 @@
 /*
  * ==========================================================
  * Gulpfile.js 
- * Task runner for 'test-libraries'
+ * Task runner for 'sushikito.fr'
  * @author: Andres Hernandez <hernandez.andres.d@gmail.com>
- * @date: Jan 2017
- * @copy: MIT
+ * @date: Mar 2017
  * ==========================================================
  */
 
@@ -39,7 +38,8 @@ var input = {
 	js: 	inputRoot + '/**/*.js',
 	html: 	inputRoot + '/html/pages/*.html',
 	sass: 	inputRoot + '/**/*.{scss,sass}',	
-	img: 	inputRoot + '/**/*.{png,jpg,jpeg,svg,gif}'
+	img: 	inputRoot + '/**/*.{png,jpg,jpeg,svg,gif,ico}',
+	font: 	inputRoot + '/**/*.{ttf,woff,eot,otf}'
 }
 
 var output = {
@@ -106,7 +106,8 @@ gulp.task('images', function(){
 // HTML
 // ======================================================================
 	gulp.task('panini', function() {
-		gulp.src(input.html)
+		return gulp
+			.src(input.html)
 	    	.pipe( 
 	    		panini({
 		    		root: inputRoot + '/html/pages',
@@ -117,6 +118,15 @@ gulp.task('images', function(){
 	    	.pipe(gulp.dest(output.build));
 	});
 
+// ======================================================================
+// Fonts
+// ======================================================================
+
+gulp.task('fonts', function(){
+	return gulp
+		.src(input.font)
+		.pipe(gulp.dest(output.build));
+});
 
 // ==============================================================
 // Watch
@@ -132,4 +142,5 @@ gulp.task('watch', function() {
 // Default
 // ==============================================================
 
-gulp.task('default', ['sass', 'javascript', 'images', 'panini']);
+gulp.task('default', ['sass', 'javascript', 'images', 'panini', 'fonts']);
+

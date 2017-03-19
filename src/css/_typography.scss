@@ -3,6 +3,29 @@
    Typogrphy
    ========================================================================== */
 
+
+// Fonts
+// --------------------------------------------------------------------------
+
+@each $font-face in 'go3v2', 'century-gothic', 
+	'century-gothic-italic', 'century-gothic-bold'{
+    @font-face {
+        font-family: $font-face; font-style: normal; font-weight: normal;
+        src: url('../fonts/#{$font-face}.eot');
+        src: url('../fonts/#{$font-face}.eot?') format('eot'),
+             url('../fonts/#{$font-face}.woff') format('woff'),
+             url('../fonts/#{$font-face}.ttf')  format('truetype');
+    }
+}
+  
+$font-stack-go3v2: Impact, Charcoal, sans-serif; 
+$font-stack-century: CenturyGothic,AppleGothic,sans-serif; 
+
+$font-go3v2: 	join( go3v2, $font-stack-century ); 
+$font-century:  join( century-gothic, $font-stack-century ); 
+$font-bold:   	join( century-gothic-bold, $font-stack-century ); 
+$font-italic:   join( century-gothic-italic, $font-stack-century ); 
+
 // Anchor
 // --------------------------------------------------------------------------
 

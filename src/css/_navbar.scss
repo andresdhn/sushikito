@@ -46,16 +46,21 @@ $navbar-z-index: 9;
 
 	.navbar-header {
 		position: relative;
-		top: $space--X2; 
+		margin-top: $space--X2;
+		height: 100%; 
 	} 
 }
 
 .navbar-brand{
 	position: absolute; 
 	text-align: center; 
-	width: auto; 
+	width: 40px;
+	height: 100%;
 	left: 50%; 
 	transform: translateX(-50%); 
+	background: url('../img/logo-mobile.png') no-repeat top left; 
+	background-color: transparent; 
+	background-size: 40px auto;
 
 	@include media($bp){
 		left: 0;

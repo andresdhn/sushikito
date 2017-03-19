@@ -1,0 +1,18 @@
+
+/* ==========================================================================
+   Hero component
+   ========================================================================== */
+
+.map-container {
+	@extend .container; 
+	
+	@include media('>sm') {
+		padding: 0; 
+		max-width: initial; 
+	}
+}
+
+#map {
+	/* The image used */
+    min-height: 15.625rem;
+}

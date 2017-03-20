@@ -1,9 +1,28 @@
-{{> hero}}
+<!-- Home banner and pattern -->
+<section id="header">
+    {{> hero}}
+    <div class="stripe-pattern pattern-sm"></div>
+</section>
+<section id="information">
+    <div class="container">
+        <div class="grid grid-gutters grid--1-1 grid--1-2@sm">
+            <div class="grid-cell">
+                <p>Sushi'Kito vous propose des sushis étonnants appelés &laquo;sushis fusion&raquo;. Issus de mélanges entre les saveurs asiatiques et celles d'Amérique du sud, telles que les épices typiques du Venezuela, nos sushis sont colorés, modernes, à l'image de notre cuisine. Mais Sushi'Kito n'est pas que pour les amateurs de sushis! Les personnes réticentes au poisson cru seront ravies de pouvoir déguster des sushis chaud et panés. Et pour les moins téméraires, il y a aussi des sushis classiques!</p>
+            </div>
+            <div class="grid-cell">
+                <img src="img/bg.jpg" alt="info-img">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="map-container">
+    	<div id="map"></div>
+    </div>
+    <div class="container">
 
-<div class="stripe-pattern pattern-sm"></div>
-<div class="map-container">
-	<div id="map"></div>
-</div>
+    </div>
+</section>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?"></script>
 <script type="text/javascript">
     // When the window has finished loading create our google map below
@@ -12,7 +31,7 @@
     // Basic options for a simple Google Map
     styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"saturation":"1"},{"lightness":"-100"},{"hue":"#ff0000"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ff0000"},{"lightness":"-2"},{"saturation":"-70"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"hue":"#ff0000"},{"lightness":"100"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"10"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"},{"saturation":"-100"},{"lightness":"-20"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-50"},{"lightness":"1"},{"hue":"#ff0000"},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#43494e"},{"visibility":"on"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":"20"}]}];
 
-    var latlng = new google.maps.LatLng(47.2152096,-1.5593377); // Ward6 Sydney
+    var latlng = new google.maps.LatLng(47.2152096,-1.5593377); // Sushi'kito Nantes
     
     function init() {
         // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -47,6 +66,5 @@
             google.maps.event.trigger(map, "resize");
             map.setCenter(center);
         });
-        
     }
 </script>

@@ -6,11 +6,49 @@
 $footer-text-color: $color-gray-dark;
 
 #footer {
-	display: block;
-	padding: $space--X2 0; 
+	padding-bottom: $space--X2; 
 	font-weight: 100;
 	font-size: $font-small; 
 	color: $footer-text-color; 
 	background-color: $color-black; 
-	text-align: center;
+
+	.footer-content {
+		padding: $space--X2 0;
+	}
+	
+	.footer-author,
+	.footer-rights {
+		text-align: center; 
+	}
+
+	.footer-author {
+		margin-top: $space; 
+	}
 }
+
+.social-group {
+	text-align: left; 
+
+	@include media('>xs'){
+		text-align: right; 		
+	}
+}
+
+.social-icon {
+	display: inline-block; 
+	height: 27px;
+	width: 25px;
+	margin: 0 0.25rem;
+	background: url(../img/social-sprite.png) no-repeat; 
+
+	&.icon-twitter {
+		background-position: 0 -40px;
+	}
+	&.icon-facebook {
+		background-position: -44px -40px; 
+	}
+	&.icon-insta {
+		background-position: -82px -40px;
+	}
+
+} 

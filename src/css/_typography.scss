@@ -26,6 +26,55 @@ $font-century:  join( century-gothic, $font-stack-century );
 $font-bold:   	join( century-gothic-bold, $font-stack-century ); 
 $font-italic:   join( century-gothic-italic, $font-stack-century ); 
 
+
+// Headings
+// --------------------------------------------------------------------------
+h1,h2,h3,
+h4,h5,h6 {
+	font-family: $font-go3v2; 
+	font-size: $base-font-size * 2; 
+
+	&.bold,
+	strong {
+		font-weight: bold; 
+		font-style: inherit; 
+	}
+
+	em, 
+	.cursive {
+		font-style: italic; 
+		font-style: inherit; 
+	}
+}
+
+
+// Paragraph
+// --------------------------------------------------------------------------
+a, p, li,  
+td, th, 
+span, label, {
+	font-family: $font-century; 
+	
+	&.bold,
+	strong {
+		font-family: $font-bold;
+		font-weight: bold;
+	}
+
+	em, 
+	.cursive {
+		font-family: $font-italic; 
+	}
+}
+
+sub,
+sup {
+	font-size: 75%;
+    line-height: inherit;
+    position: relative;
+    top: -0.5em;
+}
+
 // Anchor
 // --------------------------------------------------------------------------
 
@@ -37,5 +86,47 @@ a {
 	&:focus, 
 	&:hover {
 		outline: 0 !important;
+	}
+}
+
+// Lists
+// --------------------------------------------------------------------------
+ul:not(.nav):not(.dropdown-menu):not(.list-group) {
+	list-style-type: none; 
+    margin-left: $space; 
+    
+    li:before {
+        content: "";
+        position:relative;
+        left: -8px;
+        margin-left: -6px;
+        margin-bottom: 2px;
+        background-color: $color-text;
+
+        display:inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius:50%
+    }
+
+    ul li:before{
+        content: "";
+        position:relative;
+        left: -10px;
+        background-color: $color-text;
+
+        display:inline-block;
+        width:5px;
+        height:1px;
+    }
+}
+
+ol {
+	margin-left: $space; 
+	list-style-type: decimal;
+
+	li:before {
+		margin-left: 2px; 
+		padding: 0;
 	}
 }

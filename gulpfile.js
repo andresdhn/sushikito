@@ -76,7 +76,7 @@ gulp.task('sass', function () {
 
 gulp.task('javascript', function () {
 	return gulp
-		.src ('./src/js/main.js')
+		.src (input.js)
 		.pipe(webpack({
 			entry: './src/js/main.js',
 			output: {

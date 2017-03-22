@@ -24,3 +24,16 @@ body {
 	max-width: 56.25rem; 
 }
 
+.page--404{
+	#content {
+		height: 100%; 
+		width: 100%; 
+		display: table; 
+		vertical-align: middle; 
+	}
+	
+	.container{
+		display: table-cell; 
+		text-align: center; 
+	}
+}

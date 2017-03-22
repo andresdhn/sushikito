@@ -14,7 +14,16 @@
 		background-position: center center; 
 		background-repeat: no-repeat; 
 		background-size: cover; 
+		background-color: transparent; 
 
+		opacity: 0.8; 
+		transition: all .3s linear; 
+		
+		&:hover {
+			opacity: 1;
+			transform: scale(1.02);
+		}
+		
 		.menu-header {
 			position: absolute; 
 			top: 50%; 

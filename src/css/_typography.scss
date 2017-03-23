@@ -54,7 +54,8 @@ a, p, li,
 td, th, 
 span, label, {
 	font-family: $font-century; 
-	
+	margin-bottom: 5px; 
+
 	&.bold,
 	strong {
 		font-family: $font-bold;
@@ -79,7 +80,7 @@ sup {
 // --------------------------------------------------------------------------
 
 a {
-	text-decoration: none !important; 
+	text-decoration: none; 
 	color: inherit;
 
 	&:active, 

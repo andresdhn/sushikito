@@ -6,55 +6,64 @@
 .menu {
 	.menu-category {
 		position: relative; 
-		width: 100%; 
-		height: auto; 
+		display: block; 
+		width: 100%;
 		padding-bottom: 50%; 
 
-		background-image: url('http://placehold.it/1280x720');
-		background-position: center center; 
-		background-repeat: no-repeat; 
-		background-size: cover; 
-		background-color: transparent; 
-
-		opacity: 0.8; 
-		transition: all .3s linear; 
-		
-		&:hover {
-			opacity: 1;
-			transform: scale(1.02);
-		}
-		
-		.menu-header {
+		.category-bg {
 			position: absolute; 
-			top: 50%; 
-			width: 100%;
-			margin: 0;
-			text-align: center; 
-			transform: translateY(-50%); 
+			top: 0; 
+			bottom: 0; 
+			right: 0; 
+			left: 0;
+			margin: auto; 
+
+			background-image: url('http://placehold.it/1280x720');
+			background-position: center center; 
+			background-repeat: no-repeat; 
+			background-size: cover; 
+			background-color: transparent; 
+
+			opacity: 0.8;
+			transition: opacity .5s linear; 
+		
+			&:hover {
+				opacity: 1;
+				// transform: scale(1.02);
+			}
+
+			// &.clasiques{
+			// 	background-image: url('../img/bg2.jpg');
+			// }
+			// &.sushikito{
+			// 	background-image: url('../img/bg.jpg');
+			// }
+			// &.sashimi{
+			// 	background-image: url('../img/bg5.jpg');
+			// }
+			// &.maki{
+			// 	background-image: url('../img/bg4.jpg');
+			// }
+			// &.burrito{
+			// 	background-image: url('../img/bg6.jpg');
+			// }
 		}
-
-		// &.clasiques{
-		// 	background-image: url('../img/bg2.jpg');
-		// }
-		// &.sushikito{
-		// 	background-image: url('../img/bg.jpg');
-		// }
-		// &.sashimi{
-		// 	background-image: url('../img/bg5.jpg');
-		// }
-		// &.maki{
-		// 	background-image: url('../img/bg4.jpg');
-		// }
-		// &.burrito{
-		// 	background-image: url('../img/bg6.jpg');
-		// }
-
+		
+		.category-header {
+			position: absolute; 
+			top: 35%; 
+			width: 100%;
+			text-align: center; 
+		}
+		
 	 	@include media('>xs') {
 			padding-bottom: 33.333333%; 	 		
 	 	}
 
-	 	@include media('>md') {
-			padding-bottom: 25%; 	 		
-	 	}
+	 	// @include media('>md') {
+			// padding-bottom: 25%; 	 		
+	 	// }
 	}
+	
+	
 }

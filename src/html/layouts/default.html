@@ -22,7 +22,9 @@
         <![endif]-->
 
         {{> navigation}}
+        {{#unlesspage '404'}}
         {{> hero}}
+        {{/unlesspage}}
         <!-- site content -->
         <div id="content">
             {{> body}}

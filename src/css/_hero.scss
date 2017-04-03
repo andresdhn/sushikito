@@ -7,15 +7,18 @@
 	position: relative; 
 	width: 100%; 
 	height: auto; 
+	display: none; 
 
     background-image: url("http://placehold.it/1280x720");
     // background-image: url("../img/local.jpg");
     background-position: top center;
     background-repeat: no-repeat;
 	background-size: cover;
-    /* Create the parallax scrolling effect */
-    // background-attachment: fixed;
 
+	@include media ('>sm') {
+		display: block;
+	}
+    
 	&.hero-header{
 		.hero-ratio{
 			padding-bottom: 100%;

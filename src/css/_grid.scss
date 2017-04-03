@@ -12,4 +12,4 @@ $im-grid-cell-class: 'grid-cell';
 // Optionally include max-width to fix IE issues
 $im-grid-include-max-width: false !default;
 // Generating grid classes for 1, 2 and 3 column layouts
-@include im-grid-columns(1, 2, 3);
+@include im-grid-columns(1, 2, 3, 4, 5, 6);

@@ -12,6 +12,6 @@
  * =====================================================================
  */
 
+require('flickity'); 
 require('./placeholder'); 
 require('./navigation'); 
-

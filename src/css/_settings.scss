@@ -28,8 +28,8 @@ $color-black-80: 	#333333;
 
 $color-brand-red: 	#E32016; 
 
-$color-text: 		$color-black-90; 
-$color-background: 	$color-white; 
+$color-text: 		$color-black-90; //$color-white; 
+$color-background: 	$color-white; //$color-black-90; 
 
 /*
  * Keeps $space relative to Font-size

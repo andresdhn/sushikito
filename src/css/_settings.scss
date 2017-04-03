@@ -44,6 +44,11 @@ $line-height: 1.1;
  */
 
 $space: ($base-unite-size * $line-height) * 1px;
+$space--D2: ($space / 2); 
+$space--D3: ($space / 3); 
+$space--D4: ($space / 4); 
+$space--D5: ($space / 5); 
+
 $space--X2: ($space * 2); 
 $space--X3: ($space * 3); 
 $space--X4: ($space * 4); 

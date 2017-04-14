@@ -46,27 +46,18 @@ $navbar-z-index: 9;
 
 	.navbar-header {
 		position: relative;
-		margin-top: $space--X2;
 		height: 100%; 
 	} 
 }
 
 .navbar-brand{
 	position: absolute; 
-	text-align: center; 
-	width: 40px;
+	width: 220px;
 	height: 100%;
-	left: 50%; 
-	transform: translateX(-50%); 
-	background: url('../img/logo-mobile.png') no-repeat top left; 
-	background-color: transparent; 
-	background-size: 40px auto;
-
-	@include media($bp){
-		left: 0;
-		padding-left: $space; 
-		transform: none; 
-	}	
+	top: 0; 
+	left: 0; 
+	background: url('../img/logo-name-black-horizontal.png') no-repeat center center; 
+	background-color: $color-white; 
 }
 
 .navbar-nav {
@@ -88,7 +79,10 @@ $navbar-z-index: 9;
 	@include media($bp){
 		display: none; 
 	}	
-
+	position: absolute; 
+	right: 0; 
+	top: 50%; 
+	transform: translateY(-50%); 
 	display: block; 
 	width: 40px; 
 	padding-left: $space; 
@@ -108,22 +102,25 @@ $navbar-z-index: 9;
         height: 2px;
         margin: 5px 0; 
         border-radius: 1px;
-        background-color: $color-text;
+        background-color: $color-white;
         transition: all .3s ease-out;
 		transition-delay: .1s;
 		transform: rotate(0);
 	}
 }
 
-.nav {
-	li {
-		@include media($bp){
-			display: inline-block;
-			padding: 0 $space; 
-		}
+.navbar {
+	.nav {
+		li {
+			@include media($bp){
+				display: inline-block;
+				padding: 0 $space; 
+			}
 
-		display: block;
-		text-align: center; 
-		padding: $space 0; 
+			display: block;
+			text-align: center; 
+			padding: $space 0;
+			color: $color-white; 
+		}
 	}
 }

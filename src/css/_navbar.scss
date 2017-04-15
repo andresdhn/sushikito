@@ -52,24 +52,33 @@ $navbar-z-index: 9;
 
 .navbar-brand{
 	position: absolute; 
-	width: 220px;
+	width: 40%;
 	height: 100%;
 	top: 0; 
 	left: 0; 
-	background: url('../img/logo-name-black-horizontal.png') no-repeat center center; 
+	background: url('../img/logo-name-black-horizontal-xs.png'); 
+	background-position: 40% 50%; 
+	background-repeat: no-repeat; 
 	background-color: $color-white; 
+
+	@include media('>xs'){
+		width: 220px;
+		background: url('../img/logo-name-black-horizontal.png'); 
+	}
 }
 
 .navbar-nav {
 	position: absolute; 
 	top: 25%; 
-	width: 100%; 
-	
+	left: 50%; 
+	width: 60%; 
 	visibility: hidden;
 	
 	@include media($bp){
 		visibility: visible;
 		top: $space--X2;
+		width: 100%;
+		left: 0;  
 		text-align: center
 	}	
 
@@ -81,12 +90,12 @@ $navbar-z-index: 9;
 	}	
 	position: absolute; 
 	right: 0; 
-	top: 50%; 
-	transform: translateY(-50%); 
+	top: $space--X2;
 	display: block; 
 	width: 40px; 
 	padding-left: $space; 
-	
+	z-index: $navbar-z-index; 
+
 	.toggle-bar-wrap {
 		position: absolute;
 		cursor: pointer; 
@@ -118,7 +127,6 @@ $navbar-z-index: 9;
 			}
 
 			display: block;
-			text-align: center; 
 			padding: $space 0;
 			color: $color-white; 
 		}

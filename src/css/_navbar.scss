@@ -52,27 +52,31 @@ $navbar-z-index: 9;
 
 .navbar-brand{
 	position: absolute; 
-	width: 40%;
+	width: 50%;
 	height: 100%;
 	top: 0; 
 	left: 0; 
-	background: url('../img/logo-name-black-horizontal-xs.png'); 
+	background-image: url('../img/logo-name-black-horizontal-xs.png'); 
 	background-position: 40% 50%; 
 	background-repeat: no-repeat; 
 	background-color: $color-white; 
 
 	@include media('>xs'){
 		width: 220px;
-		background: url('../img/logo-name-black-horizontal.png'); 
+		background-image: url('../img/logo-name-black-horizontal.png'); 
 	}
 }
 
 .navbar-nav {
 	position: absolute; 
 	top: 25%; 
-	left: 50%; 
-	width: 60%; 
+	right: 0; 
+	width: 40%; 
 	visibility: hidden;
+	
+	@include media('>xs'){
+		width: 60%;
+	}
 	
 	@include media($bp){
 		visibility: visible;

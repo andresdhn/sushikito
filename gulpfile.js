@@ -136,6 +136,7 @@ gulp.task('watch', function() {
 	gulp.watch(input.sass, ['sass']);
 	gulp.watch(input.js, ['javascript']);
 	gulp.watch(inputRoot + '/html/**/*.html', ['panini']);
+	gulp.watch(inputRoot + '/img/**', ['images']);
 });
 
 // ==============================================================

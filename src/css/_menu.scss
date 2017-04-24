@@ -4,6 +4,16 @@
    ========================================================================== */
 
 #menu {
+
+	.menu-nav{
+		text-align: center; 
+
+		.nav li{
+			display: inline-block; 
+			margin: 0 15px; 
+		}
+	}
+
 	.menu-item{
 		background-color: $color-white; 
 		color: $color-black; 

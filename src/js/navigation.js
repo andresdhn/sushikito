@@ -4,26 +4,26 @@
    ========================================================================== */
 
 $(document).ready( function () {
-	$('.navbar-toggle, .navbar-nav a').on ('click', function (e) {
-		e.preventDefault(); 
-		collapseNavBar(); 
-	});
-	
-	function collapseNavBar() {
-		$('.navbar').toggleClass('open'); 	
-	}; 
+    $('.navbar-toggle, .navbar-nav a').on ('click', function (e) {
+        e.preventDefault(); 
+        collapseNavBar(); 
+    });
 
-    var menu = $('#menu'); 
-    var menuPage = menu.find('.menu-page'); 
+    function collapseNavBar() {
+        $('.navbar').toggleClass('open'); 	
+    }; 
 
-    menu.dragend({
+    
+    var menuContainer = $('#menu-container'); 
+    
+    menuContainer.dragend({
         pageClass: "menu-page"
     }); 
 
-    menuPage.click(function() {
+    $('.menu-nav .nav a').click(function() {
         var page = $(this).data("page");
     
-        menu.dragend({
+        menuContainer.dragend({
             scrollToPage: page
         });
 

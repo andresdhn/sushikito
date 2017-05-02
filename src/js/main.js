@@ -14,4 +14,6 @@
 
 // require('flickity'); 
 require('./placeholder'); 
-require('./navigation'); 
+require('./navigation');
+require('./insta'); 
+

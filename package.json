@@ -23,6 +23,7 @@
     "yargs": "^7.0.2"
   },
   "dependencies": {
-    "flickity": "^2.0.5"
+    "flickity": "^2.0.5",
+    "instafeed.js": "^1.4.1"
   }
 }

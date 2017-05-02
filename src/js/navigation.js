@@ -13,7 +13,25 @@ $(document).ready( function () {
 		$('.navbar').toggleClass('open'); 	
 	}; 
 
-})
+    var menu = $('#menu'); 
+    var menuPage = menu.find('.menu-page'); 
+
+    menu.dragend({
+        pageClass: "menu-page"
+    }); 
+
+    menuPage.click(function() {
+        var page = $(this).data("page");
+    
+        menu.dragend({
+            scrollToPage: page
+        });
+
+        return false;
+    });
+
+});
+
 // =====================================================================
 // Smooth scrolling to anchor in a page 
 // @url: https://css-tricks.com/snippets/jquery/smooth-scrolling/

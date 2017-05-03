@@ -4,6 +4,12 @@
    ========================================================================== */
 
 #menu {
+	
+	@include media('>sm'){
+		display: block;
+	}
+
+	display:  none; 
 
 	.menu-nav{
 		text-align: center; 

@@ -31,12 +31,16 @@
 #information {
 	background-color: $color-black;
 	background-image: url("../img/bg.jpg");
-    background-position: left center;
     background-repeat: no-repeat;
     background-size: cover; 
 }
 
 #banner {
+	@include media ('>sm'){
+		display: block; 
+	}
+
+	display: none; 
 	background-color: $color-black; 
 	background-image: url("../img/art.jpg");
     background-position: left center;

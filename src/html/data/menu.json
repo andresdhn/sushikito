@@ -1,4 +1,4 @@
-{
+[{
 	"category": "Entreés", 
 	"items": [
 		{
@@ -80,5 +80,18 @@
 			"descrip": "galette de riz panée, saumon, avocat, poireaux, dinamita, sauce caramel, spicy" 
 		}
 	]
-}
+},
+{
+	"category": "Suhsi", 
+	"items": [
+		{
+			"name": "Wakamé", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,60",
+			"descrip": "" 
+		} 
+	]
+}]
+
+
 

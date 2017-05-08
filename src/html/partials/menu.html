@@ -15,10 +15,11 @@
 	</div>
     <div class="container">
         <div id="menu-container">
+            {{#each menu}}
             <article class="menu-page">
-                <h1 class="category-header">{{menu.category}}</h1>
+                <h1 class="category-header">{{this.category}}</h1>
                 <div class="grid grid--gutters grid--center grid--1-2 grid--1-4@xs">
-                    {{#each menu.items}}
+                    {{#each this.items}}
                     <div class="grid-cell">
                         <div class="menu-item">
                             <img class="item-thumb" src="{{this.img}}">
@@ -30,6 +31,7 @@
                     {{/each}}
                 </div>
             </article>
+            {{/each}}
         </div>
     </div>
 </section>

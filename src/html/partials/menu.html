@@ -18,14 +18,16 @@
             <article class="menu-page">
                 <h1 class="category-header">{{menu.category}}</h1>
                 <div class="grid grid--gutters grid--center grid--1-2 grid--1-4@xs">
+                    {{#each menu.items}}
                     <div class="grid-cell">
                         <div class="menu-item">
-                            <img class="item-thumb" src="{{menu.items.img}}">
-                            <p class="item-title">{{menu.items.name}}</p>
-                            <p class="item-price">{{menu.items.price}}</p>
-                            <p class="item-desc">{{menu.items.descrip}}</p>
+                            <img class="item-thumb" src="{{this.img}}">
+                            <p class="item-title">{{this.name}}</p>
+                            <p class="item-price">{{this.price}}</p>
+                            <p class="item-desc">{{this.descrip}}</p>
                         </div>
                     </div>
+                    {{/each}}
                 </div>
             </article>
         </div>

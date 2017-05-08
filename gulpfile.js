@@ -112,7 +112,8 @@ gulp.task('images', function(){
 	    		panini({
 		    		root: inputRoot + '/html/pages',
 			    	layouts: inputRoot + '/html/layouts',
-			    	partials: inputRoot + '/html/partials'
+			    	partials: inputRoot + '/html/partials', 
+			    	data: inputRoot + '/html/data' 
 		    	})
 		    )
 	    	.pipe(gulp.dest(output.build));

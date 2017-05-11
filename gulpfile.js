@@ -18,6 +18,7 @@ var gulp 			= require('gulp'),
 	gulpif  		= require('gulp-if'),
 	sass 			= require('gulp-sass'),
 	uglify			= require('gulp-uglify'),
+	htmlmin 		= require('gulp-htmlmin'),
 	imagemin		= require('gulp-imagemin'),
     sourceMaps 		= require('gulp-sourcemaps'),
     autoPrefixer 	= require('gulp-autoprefixer');
@@ -115,6 +116,9 @@ gulp.task('images', function(){
 			    	partials: inputRoot + '/html/partials', 
 			    	data: inputRoot + '/html/data' 
 		    	})
+		    )
+		    .pipe(
+		    	gulpif(isProduction, htmlmin({collapseWhitespace: true}))
 		    )
 	    	.pipe(gulp.dest(output.build));
 	});

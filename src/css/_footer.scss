@@ -6,24 +6,19 @@
 $footer-text-color: $color-gray-dark;
 
 #footer {
-	padding-bottom: $space--X2; 
 	font-weight: 100;
 	font-size: $font-small; 
 	color: $footer-text-color; 
-	background-color: $color-black; 
-
+	
 	.footer-content {
-		padding: $space--X2 0;
+		padding: $space 0;
 	}
 	
-	.footer-author,
 	.footer-rights {
+		margin: 0; 
 		text-align: center; 
 	}
 
-	.footer-author {
-		margin-top: $space; 
-	}
 }
 
 .social-group {

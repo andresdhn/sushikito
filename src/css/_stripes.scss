@@ -8,10 +8,10 @@
 
 	section:not(#menu) {
 		@include media ('>xs'){
-			padding-bottom: 75%;
+			padding-bottom: 50%;
 		}
 		@include media ('>sm'){
-			padding-bottom: 50%;
+			padding-bottom: 33.3333333%;
 		}
 		@include media ('>lg'){
 			padding-bottom: 25%;

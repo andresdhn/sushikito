@@ -7,8 +7,20 @@
 	background-color: $color-white; 
 
 	section:not(#menu) {
+		@include media ('>xs'){
+			padding-bottom: 75%;
+		}
+		@include media ('>sm'){
+			padding-bottom: 50%;
+		}
+		@include media ('>lg'){
+			padding-bottom: 25%;
+		}
+		
 		position: relative; 
-		padding-bottom: 25%;
+		padding-bottom: 100%;
+
+
 	}
 }
 

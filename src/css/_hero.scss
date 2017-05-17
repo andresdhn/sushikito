@@ -16,8 +16,6 @@
 
 	&.hero-header{
 		.hero-ratio{
-			padding-bottom: 100%;
-
 			@include media ('>xs'){
 				padding-bottom: 75%;
 			}
@@ -27,20 +25,22 @@
 			@include media ('>lg'){
 				padding-bottom: 33.33333333333333%;
 			}
+
+			padding-bottom: 100%;
 		}	
 	}
 
 	.hero-content {
+		@include media ('>sm') {
+			width: 80%; 
+			margin: 0 10%;
+		}
+
 		position: absolute; 
 		top: 50%; 
 		width: 100%;
 		height: 10rem;
 		transform: translateY(-50%);
 		background-color: rgba($color-white, 0.5);
-
-		@include media ('>sm') {
-			width: 80%; 
-			margin: 0 10%;
-		}
 	}
 }

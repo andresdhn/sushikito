@@ -2561,6 +2561,10 @@ ol {
   background-color: #E32016;
   color: #ffffff; }
 
+@media (max-width: 899px) {
+  #trouve {
+    min-height: 200px; } }
+
 .stripe-pattern {
   width: 100%;
   background: url("../img/mosaic.jpg") 0% 20%;
@@ -2611,6 +2615,12 @@ ol {
 /* ==========================================================================
    Spacers
    ========================================================================== */
+.marginT {
+  margin-top: 17.6px; }
+
+.marginT2 {
+  margin-top: 35.2px; }
+
 .padding-TB {
   padding-top: 17.6px;
   padding-bottom: 17.6px; }

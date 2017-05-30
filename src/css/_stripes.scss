@@ -19,8 +19,6 @@
 		
 		position: relative; 
 		padding-bottom: 100%;
-
-
 	}
 }
 
@@ -45,6 +43,12 @@
 #contacter {
 	background-color: $color-brand-red;
 	color: $color-white;
+}
+
+#trouve {
+	@include media('<sm'){
+		min-height: 200px;
+	}
 }
 
 .stripe-pattern {

@@ -2,6 +2,11 @@
 /* ==========================================================================
    Spacers
    ========================================================================== */
+// margins
+.marginT		{ margin-top: $space; }
+.marginT2		{ margin-top: $space--X2; }
+
+// Paddings
 .padding-TB		{ padding-top: $space; padding-bottom: $space; }
 .padding-TBX2	{ padding-top: $space--X2; padding-bottom: $space--X2; }
 

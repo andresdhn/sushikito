@@ -2544,6 +2544,14 @@ ol {
 
 #information {
   background-color: #000000; }
+  @media (min-width: 901px) {
+    #information {
+      background-image: url("../img/bg.fw.png");
+      background-repeat: no-repeat;
+      background-position: bottom left; } }
+  @media (min-width: 901px) {
+    #information p {
+      text-align: right; } }
 
 #banner {
   display: none;
@@ -2563,6 +2571,10 @@ ol {
 
 @media (max-width: 899px) {
   #trouve {
+    min-height: 200px; } }
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  #social {
     min-height: 200px; } }
 
 .stripe-pattern {

@@ -5,7 +5,7 @@
 
 $(document).ready( function () {
     $('.navbar-toggle, .navbar-nav a').on ('click', function (e) {
-        e.preventDefault(); 
+        // e.preventDefault(); 
         collapseNavBar(); 
     });
 

@@ -23,7 +23,20 @@
 }
 
 #information {
+	@include media('>sm'){
+		background-image: url('../img/bg.fw.png'); 
+		background-repeat: no-repeat;
+		background-position: bottom left; 
+	}
+	
 	background-color: $color-black;
+	
+	@include media('>sm'){
+		p {
+			text-align: right; 
+		}
+	}
+
 }
 
 #banner {
@@ -33,7 +46,7 @@
 
 	display: none; 
 	background-color: $color-black; 
-	background-image: url("../img/art.jpg");
+	background-image: url('../img/art.jpg');
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -51,6 +64,11 @@
 	}
 }
 
+#social {
+	@include media('>sm', '<md'){
+		min-height: 200px;	
+	}
+}
 .stripe-pattern {
 	width: 100%; 
 	background: url('../img/mosaic.jpg') 0% 20%; 

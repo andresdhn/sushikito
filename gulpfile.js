@@ -133,6 +133,16 @@ gulp.task('fonts', function(){
 		.pipe(gulp.dest(output.build));
 });
 
+// ======================================================================
+// Fonts
+// ======================================================================
+
+gulp.task('vendor', function(){
+	return gulp
+		.src('./vendor/**')
+		.pipe(gulp.dest(output.build));
+});
+
 // ==============================================================
 // Watch
 // ==============================================================
@@ -148,5 +158,5 @@ gulp.task('watch', function() {
 // Default
 // ==============================================================
 
-gulp.task('default', ['sass', 'javascript', 'images', 'panini', 'fonts']);
+gulp.task('default', ['sass', 'javascript', 'images', 'panini', 'fonts', 'vendor']);
 

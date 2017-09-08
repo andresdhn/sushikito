@@ -2555,18 +2555,18 @@ ol {
 
 #banner {
   display: none;
-  background-color: #000000;
-  background-image: url("../img/art.jpg");
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
+  background-color: #333333; }
   @media (min-width: 901px) {
     #banner {
       display: block; } }
 
 #contacter {
-  background-color: #E32016;
+  background-color: #000000;
+  background-image: url("../img/art.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: #ffffff; }
 
 @media (max-width: 899px) {

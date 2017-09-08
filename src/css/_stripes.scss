@@ -45,17 +45,18 @@
 	}
 
 	display: none; 
-	background-color: $color-black; 
+	background-color: $color-black-80; 
+}
+
+#contacter {
+	background-color: $color-black;
 	background-image: url('../img/art.jpg');
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
-}
-
-#contacter {
-	background-color: $color-brand-red;
 	color: $color-white;
+
 }
 
 #trouve {

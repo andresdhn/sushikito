@@ -20,12 +20,17 @@
 *.tar
 *.zip
 
+# Media files #
+############
+*.mp4
+*.webm
+*.mov
+
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
-
 
 # OS or Editor files #
 ######################
@@ -62,4 +67,3 @@ bower_components
 #############
 build
 dist
-media

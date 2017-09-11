@@ -40,7 +40,7 @@ var input = {
 	html: 	inputRoot + '/html/pages/*.html',
 	sass: 	inputRoot + '/**/*.{scss,sass}',	
 	img: 	inputRoot + '/**/*.{png,jpg,jpeg,svg,gif,ico}',
-	font: 	inputRoot + '/**/*.{ttf,woff,eot,otf}'
+	copy: 	inputRoot + '/**/*.{otf,ttf,eot,woff,mp4}'
 }
 
 var output = {
@@ -127,9 +127,9 @@ gulp.task('images', function(){
 // Fonts
 // ======================================================================
 
-gulp.task('fonts', function(){
+gulp.task('copy', function(){
 	return gulp
-		.src(input.font)
+		.src(input.copy)
 		.pipe(gulp.dest(output.build));
 });
 
@@ -158,5 +158,5 @@ gulp.task('watch', function() {
 // Default
 // ==============================================================
 
-gulp.task('default', ['sass', 'javascript', 'images', 'panini', 'fonts', 'vendor']);
+gulp.task('default', ['sass', 'javascript', 'images', 'panini', 'copy', 'vendor']);
 

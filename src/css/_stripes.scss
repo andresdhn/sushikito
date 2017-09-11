@@ -29,8 +29,6 @@
 		background-position: bottom left; 
 	}
 	
-	background-color: $color-black;
-	
 	@include media('>sm'){
 		p {
 			text-align: right; 

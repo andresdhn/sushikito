@@ -1,0 +1,37 @@
+<!-- La Carte -->
+<section id="menu">
+	<div class="menu-nav">
+        <ul class="nav">
+            <li><a href="#" data-page="1">Entreés</a></li>
+            <li><a href="#" data-page="2">Clasique Rolls</a></li>
+            <li><a href="#" data-page="3">Sushi'kito Rolls</a></li>
+            <li><a href="#" data-page="4">Sashimi</a></li>
+            <li><a href="#" data-page="5">Nigiri</a></li>
+            <li><a href="#" data-page="6">Maki</a></li>
+            <li><a href="#" data-page="7">Sushi Burrito</a></li>
+            <li><a href="#" data-page="8">Desserts</a></li>
+            <li><a href="#" data-page="9">Boissons</a></li>
+        </ul>
+	</div>
+</section>
+<section id="menu-container">
+	<div class="container">
+        {{#each menu}}
+        <article class="menu-category">
+            <h1 class="category-header">{{this.category}}</h1>
+            <div class="grid grid--gutters grid--center grid--1-2 grid--1-4@xs">
+                {{#each this.items}}
+                <div class="grid-cell">
+                    <div class="menu-item">
+                        <img class="item-thumb" src="{{this.img}}">
+                        <p class="item-title">{{this.name}}</p>
+                        <p class="item-price">{{this.price}}</p>
+                        <p class="item-desc">{{this.descrip}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </article>
+        {{/each}}
+    </div>
+</section>

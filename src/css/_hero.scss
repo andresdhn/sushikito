@@ -8,39 +8,77 @@
 	width: 100%; 
 	height: auto; 
 
-    // background-image: url("http://placehold.it/1280x720");
-    background-image: url("../img/restaurant.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-	background-size: cover;
-
-	&.hero-header{
-		.hero-ratio{
-			@include media ('>xs'){
-				padding-bottom: 75%;
-			}
-			@include media ('>sm'){
-				padding-bottom: 50%;
-			}
-			@include media ('>lg'){
-				padding-bottom: 33.33333333333333%;
-			}
-
-			padding-bottom: 100%;
-		}	
-	}
-
-	.hero-content {
-		@include media ('>sm') {
-			width: 80%; 
-			margin: 0 10%;
+	.hero-ratio{
+		@include media ('>xs'){
+			padding-bottom: 66.66666666666667%;; // 3by2
 		}
 
+		@include media ('>sm'){
+			padding-bottom: 56.25%; // 16by9
+		}
+
+		padding-bottom: 75%; // 4by3
+	}	
+
+	.hero-content {
 		position: absolute; 
-		top: 50%; 
-		width: 100%;
-		height: 10rem;
-		transform: translateY(-50%);
-		background-color: rgba($color-white, 0.5);
+		bottom: 0%;
+	    left: 0%;
+	    height: 100%;
+	    width: 100%;
+	    overflow: hidden;
+	    background-color: $color-black;
+	}
+
+
+	.no-video,  
+	.touch {
+		.video-container video {
+	    	display: none;
+	    }
+	}
+
+	.no-video, 
+	.touch {
+		.video-container .poster {
+		    display: block !important;
+		}
+	}
+
+	.video-container {
+	    position: relative;
+	    display: block;
+	    bottom: 0%;
+	    left: 0%;
+	    height: 100%;
+	    width: 100%;
+	    overflow: hidden;
+	    content: none;
+		
+		.poster img {
+		    position: absolute;
+		    width: 100%;
+		    bottom: 0;
+		}
+		
+		.filter {
+		    position: absolute;
+		    top: 0; 
+		    bottom: 0; 
+		    left: 0;
+		    width: 100%;
+		    background: rgba(0, 0, 0, 0.4);
+		    z-index: 1;
+		}
+
+		video {
+		    position: absolute;
+		    z-index: 0;
+		    bottom: 0;
+		}
+
+		video.fillWidth {
+		    width: 100%;
+		}
 	}
 }

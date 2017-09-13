@@ -12,8 +12,6 @@
  * =====================================================================
  */
 
-require('flickity'); 
-require('./placeholder'); 
+// require('./placeholder'); 
 require('./navigation');
-require('./insta'); 
-
+require('./insta');

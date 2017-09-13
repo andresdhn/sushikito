@@ -23,7 +23,8 @@ var gulp 			= require('gulp'),
     sourceMaps 		= require('gulp-sourcemaps'),
     autoPrefixer 	= require('gulp-autoprefixer');
 
-var panini 			= require('panini'),
+var del 			= require('del'),
+	panini 			= require('panini'),
 	args    		= require('yargs').argv, 
 	webpack			= require('webpack-stream'); 
 	
@@ -48,6 +49,14 @@ var output = {
 }
 
 var sassOptions = {outputStyle: 'compressed'}
+
+// ==============================================================
+// Clear Build
+// ==============================================================
+
+gulp.task('clear', function() {
+	del(output.build);
+}); 
 
 // ==============================================================
 // Sass

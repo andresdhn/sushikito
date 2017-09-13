@@ -23,9 +23,9 @@
         <![endif]-->
 
         {{> navigation}}
-        {{#unlesspage '404' 'trouve-nous'}}
+        {{#ifpage 'index'}}
         {{> hero}}
-        {{/unlesspage}}
+        {{/ifpage}}
         <!-- site content -->
         <div id="content">
             {{> body}}

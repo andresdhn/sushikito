@@ -38,11 +38,13 @@
 		left: 0; 
 		width: 100%; 
 		transform: translateY(50%);
+		z-index: 9;
 	}
 
 }
 
 .hero-links {
+
 	.nav {
 		li {
 			@include media ('>sm'){
@@ -51,18 +53,25 @@
 
 			display: none;
 			margin: 0;
-			
-			> a {
-				color: $color-white;
-				padding: $space; 
-				background-color: $color-red-dark;
-				transition: background-color .3s ease;
-			}
+			height: auto;
+			background-color: $color-red-dark;
+			transition: background-color .1s ease;
 
-			> a:hover {
+			&:hover {
 				background-color: $color-brand-red;
 			}
-		
+			
+			&:not(:last-child){
+				border-right: 1px solid $color-white;
+			}
+
+			> a {
+				display: block;
+				color: $color-white;
+				padding: $space; 
+				margin: 0;
+			}
+
 		}
 	}
 }

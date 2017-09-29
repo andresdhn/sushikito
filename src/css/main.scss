@@ -23,11 +23,13 @@
 @import 'typography';
 
 // components
+@import 'carousel';
 @import 'navbar'; 
-@import 'hero'; 
 @import 'menu'; 
 @import 'map';
-@import 'carousel';
+
+// sections
+@import 'hero'; 
 @import 'footer'; 
 @import 'stripes'; 
 

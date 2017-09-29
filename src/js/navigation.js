@@ -13,23 +13,6 @@ $(document).ready( function () {
         $('.navbar').toggleClass('open'); 	
     }; 
 
-    
-    var menuContainer = $('#menu-container'); 
-    
-    menuContainer.dragend({
-        pageClass: "menu-page"
-    }); 
-
-    $('.menu-nav .nav a').click(function() {
-        var page = $(this).data("page");
-    
-        menuContainer.dragend({
-            scrollToPage: page
-        });
-
-        return false;
-    });
-
 });
 
 // =====================================================================

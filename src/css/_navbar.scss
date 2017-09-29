@@ -59,14 +59,13 @@ $color-brand-bg: $color-black;
 	height: 100%;
 	top: 0; 
 	left: 0; 
-	background-image: url('../img/logo-name-white-horizontal-xs.png'); 
+	background-image: url('../img/logo-name-white-horizontal.png'); 
 	background-position: 40% 50%; 
 	background-repeat: no-repeat; 
 	background-color: $color-brand-bg; 
 
 	@include media('>xs'){
 		width: 220px;
-		background-image: url('../img/logo-name-white-horizontal.png'); 
 	}
 }
 

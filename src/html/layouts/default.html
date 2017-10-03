@@ -24,9 +24,9 @@
         {{> navigation}}
         {{> hero}}
         <!-- site content -->
-        <div id="content">
+        <section id="content">
             {{> body}}
-        </div>
+        </section>
         {{> footer}}
         
         <script src="js/jquery-1.12.0.min.js"></script>
@@ -40,8 +40,8 @@
 	        ga('create', 'UA-93189108-1', 'auto');
 	        ga('send', 'pageview');
 	    </script>
-        {{#ifpage 'trouve-nous'}}
+        
         {{>mapscript}}
-        {{/ifpage}}
+        
     </body>
 </html>

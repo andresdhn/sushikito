@@ -4,82 +4,15 @@
    ========================================================================== */
 
 
-#content {
-	background-color: $color-white; 
+.stripe {
 
-	section:not(#menu) {
-		@include media ('>xs'){
-			padding-bottom: 50%;
-		}
-		@include media ('>sm'){
-			padding-bottom: 33.3333333%;
-		}
-		@include media ('>lg'){
-			padding-bottom: 25%;
-		}
-		
-		position: relative; 
-		padding-bottom: 100%;
-	}
+	&.stripe-bg {
+		background-repeat: no-repeat; 
+		background-size: cover; 
+		background-position: center center; 
+	} 
 
-}
-
-#information {
-	@include media('>sm'){
-		background-image: url('../img/bg.fw.png'); 
-		background-repeat: no-repeat;
-		background-position: bottom left; 
-	}
-	
-	@include media('>sm'){
-		p {
-			text-align: right; 
-		}
-	}
-
-}
-
-#banner {
-	@include media ('>sm'){
-		display: block; 
-	}
-
-	display: none; 
-	background-color: $color-black-80; 
-}
-
-#contacter {
-	background-color: $color-black;
-	background-image: url('../img/art.jpg');
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed;
-	color: $color-white;
-
-}
-
-#trouve {
-	@include media('<sm'){
-		min-height: 200px;
+	&.stripe-color {
+		background-color: $color-gray-lite; 
 	}
 }
-
-#social {
-	@include media('>sm', '<md'){
-		min-height: 200px;	
-	}
-}
-.stripe-pattern {
-	width: 100%; 
-	background: url('../img/mosaic.jpg') 0% 20%; 
-	background-repeat: repeat-x;  
-
-	&.pattern-sm {
-		height: custom-space(1.3295);
-	}
-}
-
-
-
-

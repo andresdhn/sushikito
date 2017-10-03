@@ -18,6 +18,19 @@ body {
 	background-color: $color-black;
 }
 
+article {
+	position: relative;
+	padding-top: custom-space(4); 
+	padding-bottom: custom-space(4); 
+	height: auto; 
+	min-height: 35vh;
+
+}
+
+#content {
+	background-color: $color-background;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 $space; 

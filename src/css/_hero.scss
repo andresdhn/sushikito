@@ -44,7 +44,6 @@
 }
 
 .hero-links {
-
 	.nav {
 		li {
 			@include media ('>sm'){
@@ -54,24 +53,24 @@
 			display: none;
 			margin: 0;
 			height: auto;
-			background-color: $color-red-dark;
-			transition: background-color .1s ease;
-
-			&:hover {
-				background-color: $color-brand-red;
-			}
 			
 			&:not(:last-child){
 				border-right: 1px solid $color-white;
 			}
-
-			> a {
-				display: block;
-				color: $color-white;
-				padding: $space; 
-				margin: 0;
-			}
-
 		}
+	}
+}
+
+.btn-links {
+	display: block;
+	color: $color-white;
+	padding: $space; 
+	margin: 0;
+
+	background-color: $color-red-dark;
+	transition: background-color .1s ease;
+
+	&:hover {
+		background-color: $color-brand-red;
 	}
 }

@@ -7,14 +7,15 @@
 // Fonts
 // --------------------------------------------------------------------------
 
-@each $font-face in 'go3v2', 'century-gothic', 
-	'century-gothic-italic', 'century-gothic-bold'{
+@each $font-face in 'go3v2', 
+	'caveat-regular', 'caveat-bold',
+	'century-gothic', 'century-gothic-italic', 'century-gothic-bold'{
     @font-face {
         font-family: $font-face; font-style: normal; font-weight: normal;
-        src: url('../fonts/#{$font-face}.eot');
-        src: url('../fonts/#{$font-face}.eot?') format('eot'),
-             url('../fonts/#{$font-face}.woff') format('woff'),
-             url('../fonts/#{$font-face}.ttf')  format('truetype');
+        src: url('../fonts/#{$font-face}.ttf');
+        src: url('../fonts/#{$font-face}.ttf?')  format('truetype'),
+             url('../fonts/#{$font-face}.woff') format('woff');
+             
     }
 }
   
@@ -26,7 +27,8 @@ $font-century:  join( century-gothic, $font-stack-century );
 $font-bold:   	join( century-gothic-bold, $font-stack-century ); 
 $font-italic:   join( century-gothic-italic, $font-stack-century ); 
 
-
+$font-heading: join( caveat-regular, $font-stack-century); 
+$font-heading-bold: join( caveat-bold, $font-stack-century); 
 // Headings
 // --------------------------------------------------------------------------
 h1,h2,h3,
@@ -34,16 +36,23 @@ h4,h5,h6 {
 	font-family: $font-go3v2; 
 	font-size: $base-font-size * 2; 
 
-	&.bold,
+	&.bold:not(.title),
 	strong {
 		font-weight: bold; 
 		font-style: inherit; 
 	}
 
 	em, 
-	.cursive {
+	&.cursive {
 		font-style: italic; 
 		font-style: inherit; 
+	}
+
+	&.title {
+		font-family: $font-heading; 
+	}
+	&.title.bold {
+		font-family: $font-heading-bold; 	
 	}
 }
 

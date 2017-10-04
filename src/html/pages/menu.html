@@ -2,15 +2,9 @@
 <section id="menu">
 	<div class="menu-nav">
         <ul class="nav">
-            <li><a href="#" data-page="1">Entreés</a></li>
-            <li><a href="#" data-page="2">Clasique Rolls</a></li>
-            <li><a href="#" data-page="3">Sushi'kito Rolls</a></li>
-            <li><a href="#" data-page="4">Sashimi</a></li>
-            <li><a href="#" data-page="5">Nigiri</a></li>
-            <li><a href="#" data-page="6">Maki</a></li>
-            <li><a href="#" data-page="7">Sushi Burrito</a></li>
-            <li><a href="#" data-page="8">Desserts</a></li>
-            <li><a href="#" data-page="9">Boissons</a></li>
+            {{#each menu}}
+            <li><a href="#" data-page="{{@index}}">{{this.category}}</a></li>
+            {{/each}}
         </ul>
 	</div>
 </section>

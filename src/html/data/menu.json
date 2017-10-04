@@ -121,7 +121,7 @@
 			"descrip": "saumon et thon cuit, topping sésame" 
 		}
 	]
-}, 
+},
 {
 	"category": "Sushi'kito Rolls", 
 	"items": [
@@ -172,6 +172,117 @@
 			"img": "http://placehold.it/250x250",
 			"price": "13,20",
 			"descrip": "saumon, avocat, masago, carotte, salade, chou rouge, chou blanc, sauce spicy" 
+		}
+	]
+},
+{
+	"category": "Sashimi", 
+	"items": [
+		{
+			"name": "Saumon", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Thon", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Dorade", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Sashimi Especial", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": "saumon, thon, dorade, avocat, mangue"
+		}
+	]
+},
+{
+	"category": "Nigiri", 
+	"items": [
+		{
+			"name": "Saumon", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Thon", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Dorade", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Saumon tataki chutney mangue", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Saumon cheese tropical", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		}
+	]
+},
+{
+	"category": "Maki", 
+	"items": [
+		{
+			"name": "Saumon", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Thon", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Dorade", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Concombre", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Dinamita", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": "surimi, masago, wakamé"
+		},
+		{
+			"name": "Cheese", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": ""
+		},
+		{
+			"name": "Kocido", 
+			"img": "http://placehold.it/250x250",
+			"price": "4,70",
+			"descrip": "saumon, thon cuit"
 		}
 	]
 },

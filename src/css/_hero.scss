@@ -25,11 +25,11 @@
 
 	.hero-content {
 		position: absolute;
-		top: 50%; 
+		top: 90%; 
 		left: 0; 
 
 		width: 100%; 
-		transform: translateY(-50%); 
+		transform: translateY(-90%); 
 	}
 
 	.hero-links {
@@ -37,8 +37,12 @@
 		bottom: 0; 
 		left: 0; 
 		width: 100%; 
-		transform: translateY(50%);
+		transform: translateY(120%);
 		z-index: 9;
+
+		@include media ('>sm'){
+			transform: translateY(50%);				
+		}
 	}
 
 }
@@ -46,11 +50,7 @@
 .hero-links {
 	.nav {
 		li {
-			@include media ('>sm'){
-				display: inline-block;
-			}
-
-			display: none;
+			display: inline-block;
 			margin: 0;
 			height: auto;
 			
@@ -59,12 +59,18 @@
 			}
 		}
 	}
+
+	.btn-links {
+		@include media ('>sm'){
+			padding: $space; 
+		}
+	}
 }
 
 .btn-links {
 	display: block;
 	color: $color-white;
-	padding: $space; 
+	padding: custom-space(0.5);
 	margin: 0;
 
 	background-color: $color-red-dark;
@@ -73,4 +79,21 @@
 	&:hover {
 		background-color: $color-brand-red;
 	}
+}
+
+.title {
+	font-family: $font-heading; 
+	font-size: 5rem;
+	color: $color-white;
+	text-shadow:1px 1px 70px #000;
+	line-height: 0.8;
+
+	@include media ('>sm'){
+		font-size: 7rem;
+	} 
+}
+
+.title--bold {
+	font-family: $font-heading-bold; 
+
 }

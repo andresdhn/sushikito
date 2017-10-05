@@ -33,13 +33,14 @@ $font-heading-bold: join( caveat-bold, $font-stack-century);
 // --------------------------------------------------------------------------
 h1,h2,h3,
 h4,h5,h6 {
-	font-family: $font-go3v2; 
-	font-size: $base-font-size * 2; 
-
-	&.bold:not(.title),
+	font-size: $base-font-size * 2.5;
+	font-family: $font-heading; 
+	text-shadow:1px 1px 70px #000;
+	line-height: 0.8;
+	
+	&.bold,
 	strong {
-		font-weight: bold; 
-		font-style: inherit; 
+		font-family: $font-heading-bold; 
 	}
 
 	em, 
@@ -47,6 +48,11 @@ h4,h5,h6 {
 		font-style: italic; 
 		font-style: inherit; 
 	}
+
+	&.font-sushikito {
+		font-family: $font-go3v2; 
+	}
+
 }
 
 

@@ -44,7 +44,17 @@
 			transform: translateY(50%);				
 		}
 	}
+}
 
+.hero-content {
+	h1 {
+		font-size: 5rem;
+		color: $color-white;
+		
+		@include media ('>sm'){
+			font-size: 7rem;
+		} 
+	}
 }
 
 .hero-links {
@@ -79,21 +89,4 @@
 	&:hover {
 		background-color: $color-brand-red;
 	}
-}
-
-.title {
-	font-family: $font-heading; 
-	font-size: 5rem;
-	color: $color-white;
-	text-shadow:1px 1px 70px #000;
-	line-height: 0.8;
-
-	@include media ('>sm'){
-		font-size: 7rem;
-	} 
-}
-
-.title--bold {
-	font-family: $font-heading-bold; 
-
 }

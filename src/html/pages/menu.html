@@ -9,18 +9,19 @@ bodyClass: menu
         {{/each}}
     </ul>
 </div>
-
-<div class="container">
-    {{#each menu}}
-    <article id="{{@index}}" class="menu-category">
-        <h1 class="category-header">{{this.category}}</h1>
-        <div class="grid grid--gutters grid--center grid--1-1 grid--1-2@xs">
-            {{#each this.items}}
-            <div class="grid-cell">
-                <p class="menu-item"><span class="item-title">{{this.name}}</span><span class="item-price">{{this.price}}</span></p>
+<div class="menu-container">
+    <div class="container">
+        {{#each menu}}
+        <article id="{{@index}}" class="menu-category">
+            <h1 class="category-header">{{this.category}}</h1>
+            <div class="grid grid--gutters grid--center grid--1-1 grid--1-2@xs">
+                {{#each this.items}}
+                <div class="grid-cell">
+                    <p class="menu-item"><span class="item-title">{{this.name}}</span><span class="item-price">{{this.price}}</span></p>
+                </div>
+                {{/each}}
             </div>
-            {{/each}}
-        </div>
-    </article>
-    {{/each}}
+        </article>
+        {{/each}}
+    </div>
 </div>

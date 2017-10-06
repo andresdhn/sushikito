@@ -2,33 +2,25 @@
 bodyClass: menu
 ---
 <!-- La Carte -->
-<section id="menu">
-	<div class="menu-nav">
-        <ul class="nav">
-            {{#each menu}}
-            <li><a href="#" data-page="{{@index}}">{{this.category}}</a></li>
-            {{/each}}
-        </ul>
-	</div>
-</section>
-<section id="menu-container">
-	<div class="container">
+<div class="menu-nav">
+    <ul class="nav">
         {{#each menu}}
-        <article class="menu-category">
-            <h1 class="category-header">{{this.category}}</h1>
-            <div class="grid grid--gutters grid--center grid--1-2 grid--1-4@xs">
-                {{#each this.items}}
-                <div class="grid-cell">
-                    <div class="menu-item">
-                        <img class="item-thumb" src="{{this.img}}">
-                        <p class="item-title">{{this.name}}</p>
-                        <p class="item-price">{{this.price}}</p>
-                        <p class="item-desc">{{this.descrip}}</p>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </article>
+        <li><a href="#{{@index}}">{{this.category}}</a></li>
         {{/each}}
-    </div>
-</section>
+    </ul>
+</div>
+
+<div class="container">
+    {{#each menu}}
+    <article id="{{@index}}" class="menu-category">
+        <h1 class="category-header">{{this.category}}</h1>
+        <div class="grid grid--gutters grid--center grid--1-1 grid--1-2@xs">
+            {{#each this.items}}
+            <div class="grid-cell">
+                <p class="menu-item"><span class="item-title">{{this.name}}</span><span class="item-price">{{this.price}}</span></p>
+            </div>
+            {{/each}}
+        </div>
+    </article>
+    {{/each}}
+</div>

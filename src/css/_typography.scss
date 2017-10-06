@@ -35,7 +35,6 @@ h1,h2,h3,
 h4,h5,h6 {
 	font-size: $base-font-size * 2.5;
 	font-family: $font-heading; 
-	text-shadow:1px 1px 70px #000;
 	line-height: 0.8;
 	
 	&.bold,

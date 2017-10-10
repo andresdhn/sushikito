@@ -18,11 +18,6 @@
 	
 	text-align: center; 
 
-	@include media ('>sm'){
-		min-height: 680px;
-    	max-height: 1200px;
-    }
-
 	.hero-content {
 		position: absolute;
 		top: 90%; 
@@ -45,6 +40,27 @@
 		}
 	}
 }
+
+
+.home {
+	#hero{
+		@include media ('>sm'){
+			min-height: 680px;
+	    	max-height: 1200px;
+	    }
+	}
+}
+
+.menu {
+	#hero{
+		@include media ('>sm'){
+			min-height: 680px;
+	    	max-height: 720px;
+	    }
+	}
+}
+
+
 
 .hero-content {
 	h1 {

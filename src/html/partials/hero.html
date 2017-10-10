@@ -1,8 +1,9 @@
 <!-- Hero -->
+{{#ifpage 'index'}}
 <section id="hero" style="background-image: url('./img/hero-2.jpg');">
     <div class="hero-content">
     	<div class="container">
-    		<h1>Sushis Fusion!</h1>
+        <h1>Sushis Fusion!</h1>
     	</div>
 	</div>
 	<div class="hero-links">
@@ -13,3 +14,14 @@
         </ul>
 	</div>
 </section>
+{{/ifpage}}
+
+{{#ifpage 'menu'}}
+<section id="hero" style="background-image: url('./img/hero-3.jpg');">
+    <div class="hero-content">
+        <div class="container">
+        <h1>Nous menus</h1>
+        </div>
+    </div>
+</section>
+{{/ifpage}}

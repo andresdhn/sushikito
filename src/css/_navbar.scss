@@ -125,26 +125,24 @@ $color-brand-bg: $color-black;
 	}
 }
 
-.navbar {
-	.nav {
-		li {
-			@include media($bp){
-				display: inline-block;
-				padding: 0 $space; 
+.nav {
+	li {
+		@include media($bp){
+			display: inline-block;
+			padding: 0 $space; 
 
-				> a {
-					padding-bottom: $space / 1.2;
-					border-bottom: 2px solid transparent;
-				}
-
-				> a:hover {
-					border-color: $color-navbar-text; 
-				}
+			> a {
+				padding-bottom: $space / 1.2;
+				border-bottom: 2px solid transparent;
 			}
 
-			display: block;
-			padding: $space 0;
-			color: $color-navbar-text; 
+			> a:hover {
+				border-color: $color-navbar-text; 
+			}
 		}
+
+		display: block;
+		padding: $space 0;
+		color: $color-navbar-text; 
 	}
 }

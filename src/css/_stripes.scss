@@ -5,14 +5,20 @@
 
 
 .stripe {
-
-	&.stripe-bg {
+	&.stripe--bg {
 		background-repeat: no-repeat; 
 		background-size: cover; 
 		background-position: center center; 
 	} 
 
-	&.stripe-color {
+	&.stripe--color {
 		background-color: $color-gray-lite; 
 	}
+
+	&.stripe--bordered {
+		background-image: url('../img/pattern_dots_sm-20.png'), url('../img/pattern_dots_sm-20_down.png'); 
+		background-position: top left, bottom left; 
+		background-repeat: repeat-x, repeat-x;
+	}
 }
+

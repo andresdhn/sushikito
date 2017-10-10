@@ -35,7 +35,23 @@
 	.item-title {
 		float: left; 
 	}
+
 	.item-price {
 		float: right; 
+	}
+}
+
+.menu-nav {
+	position: relative;
+	text-align: center; 
+	min-height: $space--X4;
+	background-color: $color-navbar-bg;
+
+	.nav {
+		position: absolute; 
+		top: 25%; 
+		right: 0; 
+		left: 0; 
+		margin: 0 auto;
 	}
 }

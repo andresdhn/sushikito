@@ -82,7 +82,7 @@ $color-brand-bg: $color-black;
 	
 	@include media($bp){
 		visibility: visible;
-		top: $space--X2;
+		top: $space;
 		width: 100%;
 		left: 0;  
 		text-align: center
@@ -122,27 +122,5 @@ $color-brand-bg: $color-black;
         transition: all .3s ease-out;
 		transition-delay: .1s;
 		transform: rotate(0);
-	}
-}
-
-.nav {
-	li {
-		@include media($bp){
-			display: inline-block;
-			padding: 0 $space; 
-
-			> a {
-				padding-bottom: $space / 1.2;
-				border-bottom: 2px solid transparent;
-			}
-
-			> a:hover {
-				border-color: $color-navbar-text; 
-			}
-		}
-
-		display: block;
-		padding: $space 0;
-		color: $color-navbar-text; 
 	}
 }

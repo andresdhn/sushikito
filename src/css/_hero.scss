@@ -73,37 +73,3 @@
 		} 
 	}
 }
-
-.hero-links {
-	.nav {
-		li {
-			display: inline-block;
-			margin: 0;
-			height: auto;
-			
-			&:not(:last-child){
-				border-right: 1px solid $color-white;
-			}
-		}
-	}
-
-	.btn-links {
-		@include media ('>sm'){
-			padding: $space; 
-		}
-	}
-}
-
-.btn-links {
-	display: block;
-	color: $color-white;
-	padding: custom-space(0.5);
-	margin: 0;
-
-	background-color: $color-red-dark;
-	transition: background-color .1s ease;
-
-	&:hover {
-		background-color: $color-brand-red;
-	}
-}

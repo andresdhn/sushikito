@@ -1,0 +1,55 @@
+
+/* ==========================================================================
+   Navbar Component
+   ========================================================================== */
+
+$color-navbar-text: $color-black;
+
+.nav {
+	// Base nav-item style 
+	// Used in the Navbar
+	li {
+		@include media('>sm'){
+			display: inline-block;
+			
+			> a {
+				padding-bottom: $space / 1.2;
+				border-bottom: 2px solid transparent;
+				transition: border-color .2s ease;
+			}
+
+			> a:hover {
+				border-color: $color-black; 
+			}
+		}
+
+		display: block;
+		padding: $space;
+		color: $color-black; 
+	}
+
+	// nav-items Buttons
+	li.nav-btn {
+		display: inline-block;
+		height: auto;
+		margin: 0;
+		
+		&:not(:last-child){
+			border-right: 1px solid $color-white;
+		}
+
+		> a:hover {
+			border-color: transparent; 
+		}
+	}
+
+	li.btn--red {
+		color: $color-white;
+		background-color: $color-red-dark;
+		transition: background-color .1s ease;
+
+		&:hover {
+			background-color: $color-brand-red;
+		}
+	}
+}

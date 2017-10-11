@@ -11,7 +11,12 @@
     </div>
     <div class="navbar-nav">
         <ul class="nav">
+            {{#unlesspage 'index'}}
+            <li><a href="index.html">Home</a></li>
+            {{/unlesspage}}
+            {{#unlesspage 'menu'}}
             <li><a href="menu.html">Menu</a></li>
+            {{/unlesspage}}
             <li><a href="./index.html#information">Information</a></li>
             <li><a href="./index.html#trouve">Trouve nous</a></li>
         </ul>

@@ -91,6 +91,7 @@
 
 .text--uppercase { text-transform: uppercase; }
 .text--underlined { text-decoration: underline; }
+.text--tilted { transform: rotate(-5deg); }
 
 /*
  * Text Alignment
@@ -110,7 +111,6 @@
  */
 
 .text--white { color: $color-white; }
-
 .text--shadow { text-shadow:1px 1px 70px #000; }
 
 

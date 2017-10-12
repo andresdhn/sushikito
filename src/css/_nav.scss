@@ -32,7 +32,7 @@ $color-navbar-text: $color-black;
 	li.nav-btn {
 		display: inline-block;
 		height: auto;
-		margin: 0;
+		margin-right: -4px;
 		
 		&:not(:last-child){
 			border-right: 1px solid $color-white;

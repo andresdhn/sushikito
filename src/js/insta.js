@@ -3,7 +3,7 @@
    Instagram
    ========================================================================== */
 
-if (window.location.pathname == '/index.html') {
+
     var Instafeed = require("instafeed.js");
     var feed = new Instafeed({
         get: 'user',
@@ -19,7 +19,6 @@ if (window.location.pathname == '/index.html') {
         }
     });
     feed.run();
-}    
 
     
 

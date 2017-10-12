@@ -83,24 +83,26 @@
 /*
  * White space; no wrap
  */
-.noWrap {
-    white-space: nowrap; 
-}
+.noWrap { white-space: nowrap; }
 
 /*
- * Text
+ * Text transforms
  */
 
- .text--uppercase {
-    text-transform: uppercase;
- }
+.text--uppercase { text-transform: uppercase; }
+.text--underlined { text-decoration: underline; }
+
+/*
+ * Text Alignment
+ */
+
 
 .text--center { text-align: center; }
 .text--left { text-align: left; }
 .text--right { text-align: right; }
 .text--justify { text-align: justify; }
 
-.text--underlined { text-decoration: underline; }
+
 
 
 /*
@@ -108,4 +110,7 @@
  */
 
 .text--white { color: $color-white; }
+
+.text--shadow { text-shadow:1px 1px 70px #000; }
+
 

@@ -59,7 +59,7 @@ h4,h5,h6 {
 // --------------------------------------------------------------------------
 a, p, li,  
 td, th, 
-span, label, {
+span, label{
 	font-family: $font-century; 
 	margin-bottom: 5px; 
 
@@ -72,6 +72,16 @@ span, label, {
 	em, 
 	.cursive {
 		font-family: $font-italic; 
+	}
+}
+
+blockquote{
+	font-family: $font-italic; 
+	margin-bottom: 5px; 
+
+	&.bold,
+	strong {
+		font-weight: bold;
 	}
 }
 

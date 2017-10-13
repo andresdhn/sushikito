@@ -26,3 +26,16 @@
 	min-height: 50vh;
 	background-position: top center;
 }
+
+#information.stripe {
+	min-height: 70vh;
+	background-repeat: no-repeat; 
+	background-position: top left; 
+	background-size: 100%;
+	background-image: url('../img/chef-sebastian.jpg');
+
+	@include media('>sm'){
+		min-height: 50vh;
+		background-size: cover;
+	}
+}

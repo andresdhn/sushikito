@@ -17,7 +17,7 @@ bodyClass: menu
             <div class="grid grid--gutters grid--center grid--1-1 grid--1-2@xs">
                 {{#each this.items}}
                 <div class="grid-cell">
-                    <div class="menu-item">
+                    <div id="{{this.ref}}" class="menu-item">
                         <p class="item-title bold">{{this.name}}</p>
                         <p class="item-info clearfix"><span class="pull-left">{{this.descrip}}</span><span class="pull-right">+info</span></p>
                     </div>

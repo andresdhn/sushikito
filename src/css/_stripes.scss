@@ -33,10 +33,12 @@
 }
 
 #information.stripe {
+	background-position: top left; 
+	background-repeat: no-repeat;
+	background-size: 100%;  
+	background-image: url('../img/chef-sebastian-xs.jpg');
+	
 	@include media('>sm'){
-		background-position: top left; 
-		background-repeat: no-repeat;
-		background-size: 955px;  
 		background-image: url('../img/chef-sebastian.jpg');
 	}
 }

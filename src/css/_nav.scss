@@ -7,7 +7,7 @@ $color-navbar-text: $color-black;
 
 .nav {
 	// Base nav-item style 
-	
+	font-size: 0; 
 	// Used in the Navbar
 	li {
 		@include media('>sm'){
@@ -27,12 +27,18 @@ $color-navbar-text: $color-black;
 		display: block;
 		padding: $space;
 		color: $color-black; 
+		font-size: $base-font-size;  
 	}
 
 	// nav-items Buttons
 	li.nav-btn {
+
+		@include media('>xs') { font-size: $base-font-size * 0.95; }
+		@include media('>sm') { font-size: $base-font-size; }
+
 		display: inline-block;
 		height: auto;
+		font-size: $base-font-size * 0.85;  
 		
 		&:not(:last-child){
 			border-right: 1px solid $color-white;

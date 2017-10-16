@@ -18,17 +18,17 @@
 
 // Margins
 // --------------------------------------------------------------------------
-@include spacers ('.margin-T', margin, 6); 
-@include spacers ('.margin-R', margin, 6); 
-@include spacers ('.margin-B', margin, 6); 
-@include spacers ('.margin-L', margin, 6); 
+@include spacers ('.margin-T', margin-top, 6); 
+@include spacers ('.margin-R', margin-right, 6); 
+@include spacers ('.margin-B', margin-bottom, 6); 
+@include spacers ('.margin-L', margin-left, 6); 
 
 // Paddings
 // --------------------------------------------------------------------------
-@include spacers ('.padding-T', padding, 6); 
-@include spacers ('.padding-R', padding, 6); 
-@include spacers ('.padding-B', padding, 6); 
-@include spacers ('.padding-L', padding, 6); 
+@include spacers ('.padding-T', padding-top, 6); 
+@include spacers ('.padding-R', padding-right, 6); 
+@include spacers ('.padding-B', padding-bottom, 6); 
+@include spacers ('.padding-L', padding-left, 6); 
 
 
 // Paddings Compound

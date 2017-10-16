@@ -2,22 +2,36 @@
 /* ==========================================================================
    Spacers
    ========================================================================== */
-// margins
-.marginT		{ margin-top: $space; }
-.marginT2		{ margin-top: $space--X2; }
+
+@mixin spacers ($className, $css, $units){
+	@for $i from 0 through $units {
+		#{$className}X#{$i}{
+			#{$css}: custom-space($i); 
+		}
+	}	
+} 
+
+// Resets
+// --------------------------------------------------------------------------
+.margin-X0 		{ margin: 0; } 
+.padding-X0		{ padding: 0; } 
+
+// Margins
+// --------------------------------------------------------------------------
+@include spacers ('.margin-T', margin, 6); 
+@include spacers ('.margin-R', margin, 6); 
+@include spacers ('.margin-B', margin, 6); 
+@include spacers ('.margin-L', margin, 6); 
 
 // Paddings
+// --------------------------------------------------------------------------
+@include spacers ('.padding-T', padding, 6); 
+@include spacers ('.padding-R', padding, 6); 
+@include spacers ('.padding-B', padding, 6); 
+@include spacers ('.padding-L', padding, 6); 
+
+
+// Paddings Compound
+// --------------------------------------------------------------------------
 .padding-TB		{ padding-top: $space; padding-bottom: $space; }
 .padding-TBX2	{ padding-top: $space--X2; padding-bottom: $space--X2; }
-
-.padding-TX2 	{ padding-top: $space--X2; }
-
-// Aspect ratio 
-.ratio--10by1	 { padding-bottom: 10%; }
-.ratio--4by1     { padding-bottom: 25%; }
-.ratio--3by1     { padding-bottom: 33.33333333333333%; }
-.ratio--2by1     { padding-bottom: 50%; }
-.ratio--16by9    { padding-bottom: 56.25%; }
-.ratio--3by2     { padding-bottom: 66.66666666666667%; }
-.ratio--4by3     { padding-bottom: 75%; }
-.ratio--full     { padding-bottom: 100%; }

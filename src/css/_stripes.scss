@@ -28,7 +28,6 @@
 }
 
 #information.stripe {
-	min-height: 70vh;
 	background-repeat: no-repeat; 
 	background-position: top left; 
 	background-size: 100%;
@@ -36,6 +35,6 @@
 
 	@include media('>sm'){
 		min-height: 50vh;
-		background-size: cover;
+		background-size: 965px;  
 	}
 }

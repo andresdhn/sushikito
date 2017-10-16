@@ -8,13 +8,25 @@
 	padding: 0;
 }
 
+html {
+    font-family: sans-serif, arial;
+    font-size: 85%;
+    line-height: $line-height;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: $color-text; 
+
+    @include media('>xs') { font-size: 95%; }
+    @include media('>sm') { font-size: 100%; }
+}
+
 html, 
 body {
 	height: 100%; 
 	width: 100%;
-	font-size: $base-font-size;
-	line-height: $line-height;
-	color: $color-text; 
 	background-color: $color-black;
 }
 
@@ -23,8 +35,6 @@ article {
 	padding-top: custom-space(4); 
 	padding-bottom: custom-space(4); 
 	height: auto; 
-	min-height: 50vh;
-
 }
 
 #content {

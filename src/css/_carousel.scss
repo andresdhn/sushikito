@@ -72,3 +72,9 @@
 .flickity-prev-next-button .arrow {
     fill: $color-white;
 }
+
+.flickity-page-dots{
+	@include media ('<sm') {
+		bottom: -50px;
+	}
+}

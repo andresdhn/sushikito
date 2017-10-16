@@ -1,10 +1,16 @@
 
 /* ==========================================================================
-   Stripe component
+   Content Stripes
    ========================================================================== */
 
 
 .stripe {
+	min-height: 60vh;
+
+	@include media('>sm'){
+		min-height: 50vh;		
+	}
+
 	&.stripe--bg {
 		background-repeat: no-repeat; 
 		background-size: cover; 
@@ -23,18 +29,14 @@
 }
 
 #banner.stripe {
-	min-height: 50vh;
 	background-position: top center;
 }
 
 #information.stripe {
-	background-repeat: no-repeat; 
-	background-position: top left; 
-	background-size: 100%;
-	background-image: url('../img/chef-sebastian.jpg');
-
 	@include media('>sm'){
-		min-height: 50vh;
-		background-size: 965px;  
+		background-position: top left; 
+		background-repeat: no-repeat;
+		background-size: 955px;  
+		background-image: url('../img/chef-sebastian.jpg');
 	}
 }

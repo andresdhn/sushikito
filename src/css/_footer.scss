@@ -10,15 +10,45 @@ $footer-text-color: $color-gray;
 	position: relative; 
 	width: 100%; 
 	height: 150px; 
+	padding-top: $section-space; 
+	padding-bottom: $section-space; 
 
+	text-align: center; 	
     font-size: $font-small; 
 	color: $footer-text-color; 
 	background-color: $footer-bg; 
 
+	// Social media icons
+	.icon {
+		display: inline-block;
+		height: 30px; 
+		width: 30px; 
+		margin-right: 1em; 
 
-	.footer-bottom {
-		position: absolute; 
-		bottom: 0; 
-		width: 100%;
+		background-repeat: no-repeat; 
+		background-image: url('../img/social-sprite.png'); 
+		
+		&.icon-facebook { 
+			background-position: 0% 0%; 
+		
+			&:hover {
+				background-position: 0% 100%;
+			}
+		}
+		&.icon-twitter { 
+			background-position: 23% 0%; 
+			width: 32px; 
+
+			&:hover {
+				background-position: 23% 100%;
+			}
+		}
+		&.icon-instagram { 
+			background-position: 100% 0%; 
+
+			&:hover {
+				background-position: 100% 100%;
+			}
+		}
 	}
 }

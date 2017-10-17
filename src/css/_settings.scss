@@ -60,7 +60,8 @@ $space--X5: ($space * 5);
 	@return ($space * $space-unit);
 }
 
-
+$section-space: custom-space(4); 
+ 
 /*
  * Font Size
  */

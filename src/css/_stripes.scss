@@ -11,6 +11,18 @@
 		min-height: 50vh;		
 	}
 
+	&.stripe--sm {
+		@include media('>sm'){
+			min-height: 30vh;		
+		}		
+	}
+
+	&.stripe--md {
+		@include media('>sm'){
+			min-height: 50vh;		
+		}		
+	}
+
 	&.stripe--bg {
 		background-repeat: no-repeat; 
 		background-size: cover; 
@@ -40,5 +52,6 @@
 	
 	@include media('>sm'){
 		background-image: url('../img/chef-sebastian.jpg');
+		background-size: auto 100%;
 	}
 }

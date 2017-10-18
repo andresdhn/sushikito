@@ -3,22 +3,27 @@
    Navigation
    ========================================================================== */
 
-$(document).ready( function () {
-    $('.navbar-toggle, .navbar-nav a').on ('click', function (e) {
-        // e.preventDefault(); 
-        collapseNavBar(); 
-    });
+( function () {
+    var navbar = document.querySelector('.navbar'); 
+    var toggler = document.querySelector('.navbar-toggle'); 
+    var navbarLink = document.querySelector('.navbar-nav a'); 
 
     function collapseNavBar() {
-        $('.navbar').toggleClass('open'); 	
-    }; 
+        navbar.classList.toggle('open');  
+    }
 
-});
+    toggler.addEventListener ('click', collapseNavBar);
+    navbarLink.addEventListener ('click', collapseNavBar);
+
+})();
 
 // =====================================================================
 // Smooth scrolling to anchor in a page 
 // @url: https://css-tricks.com/snippets/jquery/smooth-scrolling/
 // =====================================================================
+
+var $ = require('jquery'); 
+
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

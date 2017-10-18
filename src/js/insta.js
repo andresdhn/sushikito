@@ -2,7 +2,8 @@
 /* ==========================================================================
    Instagram
    ========================================================================== */
-if ($('#instafeed').length ){
+
+if (document.querySelector('#instafeed')) {
     var Instafeed = require("instafeed.js");
     var feed = new Instafeed({
         get: 'user',

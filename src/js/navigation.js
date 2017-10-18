@@ -2,29 +2,27 @@
 /* ==========================================================================
    Navigation
    ========================================================================== */
+var $ = require('jquery'); 
 
-( function () {
-    var navbar = document.querySelector('.navbar'); 
-    var toggler = document.querySelector('.navbar-toggle'); 
-    var navbarLink = document.querySelector('.navbar-nav a'); 
+$(document).ready( function () {
+    var navbar = $('.navbar'); 
+    var toggler = navbar.find('.navbar-toggle'); 
+    var navbarLink = navbar.find('.navbar-nav a'); 
 
     function collapseNavBar() {
-        navbar.classList.toggle('open');  
+        navbar.toggleClass('open');  
     }
 
-    toggler.addEventListener ('click', collapseNavBar);
-    navbarLink.addEventListener ('click', collapseNavBar);
-
-})();
+    toggler.on ('click', collapseNavBar);
+    navbarLink.on ('click', collapseNavBar);
+});
 
 // =====================================================================
 // Smooth scrolling to anchor in a page 
 // @url: https://css-tricks.com/snippets/jquery/smooth-scrolling/
 // =====================================================================
 
-var $ = require('jquery'); 
-
-$(function() {
+$(document).ready(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);

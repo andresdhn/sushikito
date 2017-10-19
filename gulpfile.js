@@ -84,15 +84,22 @@ gulp.task('sass', function () {
 // Javascript
 // ==============================================================
 
-gulp.task('javascript', function () {
+gulp.task('js', function () {
 	return gulp
 		.src (input.js)
-		.pipe(webpack({
-			entry: './src/js/main.js',
-			output: {
-                 filename: 'main.js'
-            }
-		}))
+		.pipe(
+			webpack({
+				entry: './src/js/main.js',
+				module: {
+				  	loaders: [
+				    	{ test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] }
+				  	]
+				},
+				output: {
+	                filename: 'main.js'
+	            }
+			})
+		)
 		.pipe(
 			gulpif(isProduction, uglify())
 		)
@@ -158,7 +165,7 @@ gulp.task('vendor', function(){
 
 gulp.task('watch', function() {
 	gulp.watch(input.sass, ['sass']);
-	gulp.watch(input.js, ['javascript']);
+	gulp.watch(input.js, ['js']);
 	gulp.watch(inputRoot + '/html/**/*.html', ['panini']);
 	gulp.watch(inputRoot + '/img/**', ['images']);
 });
@@ -167,5 +174,5 @@ gulp.task('watch', function() {
 // Default
 // ==============================================================
 
-gulp.task('default', ['sass', 'javascript', 'images', 'panini', 'copy', 'vendor']);
+gulp.task('default', ['sass', 'js', 'images', 'panini', 'copy', 'vendor']);
 

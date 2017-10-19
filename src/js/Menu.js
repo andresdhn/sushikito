@@ -6,14 +6,31 @@ var createReactClass = require('create-react-class');
 var Menu = createReactClass({ 
 	getInitialState() {
 		return {
-			items: require('./data.js')
+			menu: require('./data.js')
 		}
 	}, 
 
 	renderItems(item) {
 		return (
-			<article key={ item.id } id={ item.id } className="menu-category">
-				<h1 className="category-header">{ item.category }</h1>
+			<div key={ item.ref } id={ item.ref } className="grid-cell">
+                <div className="menu-item">
+                    <p className="item-title bold">{ item.name }</p>
+                    <p className="item-info clearfix">
+                    	<span className="pull-left">{ item.descrip }</span>
+                    	<span className="pull-right">+info</span>
+                    </p>
+                </div>
+            </div>
+		); 
+	},
+
+	renderCategories(category) {
+		return (
+			<article key={ category.id } id={ category.id } className="menu-category">
+				<h1 className="category-header">{ category.category }</h1>
+				 <div className="grid grid--gutters grid--center grid--1-1 grid--1-2@xs">
+				 	{ category.items.map( this.renderItems ) }
+				 </div>
 			</article>
 		);
 	}, 
@@ -21,7 +38,7 @@ var Menu = createReactClass({
 	render() {
 		return (
 			<div>
-				{this.state.items.map( this.renderItems )}
+				{ this.state.menu.map( this.renderCategories ) }
 			</div>
 		); 
 	}

@@ -4,19 +4,20 @@
    ========================================================================== */
 
 .menu-container {
-	background: url('../img/mosaic3.jpg') repeat-y, url('../img/mosaic4.jpg') repeat-y; 
-	background-position: -8% 0%, 108% 0%;
 	padding: 0 $space; 
 
-	@include media ('>sm'){
-		padding: 0;
-		background-position: -6% 0%, 106% 0%;
-	}
+	// background: url('../img/mosaic3.jpg') repeat-y, url('../img/mosaic4.jpg') repeat-y; 
+	// background-position: -8% 0%, 108% 0%;
+	
+	// @include media ('>sm'){
+	// 	padding: 0;
+	// 	background-position: -6% 0%, 106% 0%;
+	// }
 
-	@include media ('>md'){
-		padding: 0;
-		background-position: 0% 0%, 100% 0%;
-	}
+	// @include media ('>md'){
+	// 	padding: 0;
+	// 	background-position: 0% 0%, 100% 0%;
+	// }
 }
 
 .menu-category {
@@ -24,7 +25,6 @@
 	padding: 0 3rem 3rem 3rem; 
 	border: 2px dotted $color-black-80; 
 	border-radius: 65px;
-	
 
 	.category-header {
 		display: inline-block; 

@@ -12,10 +12,8 @@ var Menu = createReactClass({
 
 	renderItems(item) {
 		return (
-			<article key={ item.id } 
-				id={ item.id }
-				className="menu-category">
-				{ item.category }
+			<article key={ item.id } id={ item.id } className="menu-category">
+				<h1 className="category-header">{ item.category }</h1>
 			</article>
 		);
 	}, 

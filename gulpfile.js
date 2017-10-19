@@ -89,15 +89,18 @@ gulp.task('js', function () {
 		.src (input.js)
 		.pipe(
 			webpack({
-				entry: './src/js/main.js',
+				entry: {
+					main: './src/js/main.js',
+					menu: './src/js/Menu.js'
+				},
 				module: {
 				  	loaders: [
 				    	{ test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] }
 				  	]
 				},
 				output: {
-	                filename: 'main.js'
-	            }
+			        filename: '[name].js'
+			    }
 			})
 		)
 		.pipe(

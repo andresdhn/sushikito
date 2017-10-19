@@ -4,6 +4,7 @@
   "description": "Website for sushikito.fr",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andres Hernandez <hernandez.andres.d@gmail.com>",
@@ -23,10 +24,12 @@
     "gulp-uglify": "^2.0.1",
     "panini": "^1.4.0",
     "run-sequence": "^1.2.2",
+    "webpack-dev-server": "^1.12.1",
     "webpack-stream": "^3.2.0",
     "yargs": "^7.0.2"
   },
   "dependencies": {
+    "create-react-class": "^15.6.2",
     "flickity": "^2.0.5",
     "instafeed.js": "^1.4.1",
     "jquery": "^3.2.1",

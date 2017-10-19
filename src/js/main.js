@@ -14,4 +14,4 @@
 
 require('./navigation');
 require('./insta');
-require('./index');
+require('./Menu');

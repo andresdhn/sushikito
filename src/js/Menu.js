@@ -1,41 +1,21 @@
 
 var React = require('react'); 
-// var data = require('../html/menu.json');
+var ReactDOM = require('react-dom');
+var createReactClass = require('create-react-class');
 
-var Menu = React.createClass({ 
-	GetInitialState() {
+var Menu = createReactClass({ 
+	getInitialState() {
 		return {
-			data: [{
-				"id": "0",
-				"category": "Entreés", 
-				"items": [
-					{
-						"ref":  "wakame", 
-						"name": "Wakamé", 
-						"img": "http://placehold.it/250x250",
-						"price": "4,60",
-						"descrip": "" 
-					}, 
-					{
-						"ref":  "wakame-tropical", 
-						"name": "Wakamé Tropical", 
-						"img": "http://placehold.it/250x250",
-						"price": "5,60",
-						"descrip": "surimi, masago, mangue" 
-					}
-				]
-			}]
-		};
+			items: require('./data.js')
+		}
 	}, 
 
-	renderItems() {
+	renderItems(item) {
 		return (
-			<article 
-				class="grid-cell"
-				id={ data.id }
-				key={ data.id } 
-			>
-				{ data.category }
+			<article key={ item.id } 
+				id={ item.id }
+				className="menu-category">
+				{ item.category }
 			</article>
 		);
 	}, 
@@ -43,10 +23,10 @@ var Menu = React.createClass({
 	render() {
 		return (
 			<div>
-				{ this.state.data.map( this.renderItems ) }
+				{this.state.items.map( this.renderItems )}
 			</div>
 		); 
 	}
 }); 
 
-exports Menu;
+ReactDOM.render(<Menu />, document.getElementById('menu-component'));

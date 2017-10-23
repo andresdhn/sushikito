@@ -1,4 +1,3 @@
-
 var React = require('react'); 
 var ReactDOM = require('react-dom');
 var createReactClass = require('create-react-class');
@@ -6,8 +5,13 @@ var createReactClass = require('create-react-class');
 var Menu = createReactClass({ 
 	getInitialState() {
 		return {
-			menu: require('./data.js')
+			menu: require('./data.js'),
+			view: false
 		}
+	}, 
+
+	toggle() {
+		(this.state.view) ? this.setState({ view: false }) : this.setState({ view: true });
 	}, 
 
 	renderItems(item) {
@@ -26,11 +30,11 @@ var Menu = createReactClass({
 
 	renderCategories(category) {
 		return (
-			<article key={ category.id } id={ category.id } className="menu-category">
+			<article key={ category.id } id={ category.id } className="menu-category" onClick={this.toggle}>
 				<h1 className="category-header">{ category.category }</h1>
-				 <div className="grid grid--gutters grid--center grid--1-1 grid--1-2@xs">
-				 	{ category.items.map( this.renderItems ) }
-				 </div>
+				<div className="grid grid--gutters grid--center grid--1-1 grid--1-2@xs">
+					{ this.state.view && category.items.map(this.renderItems) }
+				</div>
 			</article>
 		);
 	}, 
@@ -42,6 +46,7 @@ var Menu = createReactClass({
 			</div>
 		); 
 	}
+
 }); 
 
 ReactDOM.render(<Menu />, document.getElementById('menu-component'));

@@ -16,12 +16,9 @@ var MenuItem = createReactClass({
 
 	renderDetail() {
 	    return (
-	    	<div className="clearfix">
-				<img className="pull--left" src={this.props.item.img} alt="this.props.item.name"/>
-				<div className="pull--right">
-					<p>{this.props.item.descrip}</p>
-					<p>{this.props.item.price}</p>
-				</div> 
+	    	<div className="item__info">
+				<p>{this.props.item.descrip}</p>
+				<p>{this.props.item.price}</p>
 			</div>
         )
     },
@@ -29,11 +26,14 @@ var MenuItem = createReactClass({
 	render() {
 		return (
 			<div className="grid-cell">
-	    		<div className="menu__item" onClick={this.toggle}>
-	    			<div className="clearfix">
-	    				<p className="item__title bold pull--left">{ this.props.item.name }</p>
-    					<p className="item__info bold pull--right">{(this.state.viewInfo) ? '-': '+'} info</p>
-    				</div>
+	    		<div 
+	    			className={`menu__item ${ (this.state.viewInfo) ? 'menu__item--active' : '' }`} 
+	    			onClick={this.toggle} >
+	    			<div className="item__header">
+	    				<p className="item__title bold">{ this.props.item.name }</p>
+						<p className="item__more bold">{(this.state.viewInfo) ? '-': '+'} info</p>
+					</div>
+
 					{ (this.state.viewInfo) && this.renderDetail() }
 				 </div>
 	        </div>
@@ -41,27 +41,38 @@ var MenuItem = createReactClass({
 	}
 });
 
-var Menu = createReactClass({ 
+var Category = createReactClass({ 
+	getInitialState() {
+		return {
+			viewInfo: false
+		}
+	},
 
-	renderCategories(category) {
-		return (
-			<article 
-				key={ category.id } 
-				id={ category.id } 
-				className='menu__category' >
+	toggle() {
+		(this.state.viewInfo) ? this.setState({ viewInfo: false }) : this.setState({ viewInfo: true });
+	},
 
-				<h1 className='category__header'>{ category.category }</h1>
-				<div className="grid grid--gutters grid--1-1 grid--1-2@xs">
-					{ category.items.map( item => <MenuItem key={item.ref} id={item.ref} item={item} />)}
-				</div>
-			</article>
-		)
+	renderItems() {
+		return this.props.category.items.map( item => <MenuItem key={item.ref} id={item.ref} item={item} />) 
 	},
 
 	render() {
 		return (
+			<article className='menu__category'>
+				<h1 className='category__header' onClick={this.toggle} >{ this.props.category.category }</h1>
+				<div className="grid grid--gutters grid--1-1 grid--1-2@xs">
+					{ (this.state.viewInfo) && this.renderItems() }
+				</div>
+			</article>
+		)
+	}
+});
+
+var Menu = createReactClass({ 
+	render() {
+		return (
 			<div>
-				{ this.props.list.map( this.renderCategories ) } 
+				{ this.props.list.map( category => <Category key={ category.id } id={ category.id } category={category} />)} 
 			</div>
 		); 
 	}

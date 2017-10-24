@@ -3,30 +3,17 @@
    Menu components
    ========================================================================== */
 
-.menu-container {
+.menu__container {
 	padding: 0 $space; 
-
-	// background: url('../img/mosaic3.jpg') repeat-y, url('../img/mosaic4.jpg') repeat-y; 
-	// background-position: -8% 0%, 108% 0%;
-	
-	// @include media ('>sm'){
-	// 	padding: 0;
-	// 	background-position: -6% 0%, 106% 0%;
-	// }
-
-	// @include media ('>md'){
-	// 	padding: 0;
-	// 	background-position: 0% 0%, 100% 0%;
-	// }
 }
 
-.menu-category {
+.menu__category {
 	margin-bottom: custom-space(4); 
 	padding: 0 3rem 3rem 3rem; 
 	border: 2px dotted $color-black-80; 
 	border-radius: 65px;
 
-	.category-header {
+	.category__header {
 		display: inline-block; 
 		padding: 0 $space;
 		background-color: $color-background; 
@@ -34,11 +21,12 @@
 	}
 }
 
-.menu-item{
-	text-align: left;
+.menu__item{
+	@extend .clearfix; 
+	padding: 1em 0 1em 0; 
 }
 
-.menu-nav {
+.menu__nav {
 	position: relative;
 	min-height: custom-space(8);
 	background-color: $color-navbar-bg;

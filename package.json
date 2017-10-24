@@ -4,7 +4,7 @@
   "description": "Website for sushikito.fr",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "./node_modules/.bin/webpack-dev-server --hot --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andres Hernandez <hernandez.andres.d@gmail.com>",

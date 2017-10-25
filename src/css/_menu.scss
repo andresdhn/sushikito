@@ -2,29 +2,37 @@
 /* ==========================================================================
    Menu components
    ========================================================================== */
+#menu-component {
+	background-image: url('../img/mosaic3.jpg'), url('../img/mosaic4.jpg'); 
+	background-repeat: repeat-y, repeat-y; 
+	background-position: top left, top right;	
+
+	@include media ('>sm'){
+		background-position: top left, top right;	
+	}
+	
+}
+
 .menu__category {
-	margin-bottom: custom-space(4); 
-	padding: 0 3rem 3rem 3rem; 
-	border: 1px dotted $color-black-80; 
-	border-radius: 65px;
+	padding: 3rem;
 
 	.category__header {
-		display: inline-block; 
-		padding: 0 $space;
-		background-color: $color-background; 
-		margin-top: -5rem;
+		display: block; 
+		text-align: center;
+		cursor: pointer;
 	}
 }
 
 .menu__item{
 	padding: 1em 0 1em 0; 
+	cursor: pointer;
 
-	
-	.item__title{
-		left: 0;
-	}
+	.item__info {
+		padding: $space 0;
 
-	.item__more {
-		right: 0; 
+		img {
+			border-radius: 50%;
+		}
 	}
 }
+

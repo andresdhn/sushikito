@@ -15,8 +15,15 @@ module.exports = MenuItem = createReactClass({
 	renderDetail() {
 	    return (
 	    	<div className="item__info">
-				<p>{this.props.item.descrip}</p>
-				<p>{this.props.item.price}</p>
+	    		<div className="grid grid--gutters">
+	    			<div className="grid-cell grid-cell--1-3">
+	    				<img src={ this.props.item.img } alt={ this.props.item.name } />
+	    			</div>
+	    			<div className="grid-cell grid-cell--2-3 grid-cell--center">
+						<p>{ this.props.item.descrip }</p>
+						<p>&euro; { this.props.item.price }</p>
+					</div>
+				</div>
 			</div>
         )
     },
@@ -27,9 +34,9 @@ module.exports = MenuItem = createReactClass({
 	    		<div 
 	    			className={`menu__item ${ (this.state.viewInfo) ? 'menu__item--active' : '' }`} 
 	    			onClick={this.toggle} >
-	    			<div className="item__header">
-	    				<p className="item__title bold">{ this.props.item.name }</p>
-						<p className="item__more bold">{(this.state.viewInfo) ? '-': '+'} info</p>
+	    			<div className="item__header clearfix">
+	    				<p className="item__title bold pull--left">{ this.props.item.name }</p>
+						<p className="item__more bold pull--right">{(this.state.viewInfo) ? '-': '+'} info</p>
 					</div>
 
 					{ (this.state.viewInfo) && this.renderDetail() }

@@ -15,7 +15,7 @@
 	background-size: cover; 
 	background-position: 50%; 
 	background-color: $color-gray;
-	
+
 	text-align: center; 
 
 	.hero-content {
@@ -48,6 +48,10 @@
 			min-height: 680px;
 	    	max-height: 1200px;
 	    }
+
+	    @include media ('>md'){
+			background-attachment: fixed;
+		}
 	}
 }
 

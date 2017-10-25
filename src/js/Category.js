@@ -20,7 +20,7 @@ module.exports = Category = createReactClass({
 	render() {
 		return (
 			<article className='menu__category'>
-				<h1 className='category__header' onClick={this.toggle} >{ this.props.category.category }</h1>
+				<h1 className={`category__header ${ (this.state.viewInfo) ? 'category__header--active' : '' }`}  onClick={this.toggle} >{ this.props.category.category }</h1>
 				<div className="grid grid--gutters grid--1-1 grid--1-2@xs">
 					{ (this.state.viewInfo) && this.renderItems() }
 				</div>

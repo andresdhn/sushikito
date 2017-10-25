@@ -42,6 +42,12 @@
 
 #banner.stripe {
 	background-position: top center;
+
+	@include media ('>sm'){
+		min-height: 680px;
+    	max-height: 1200px;
+    	background-position: 80% 50%;
+    }
 }
 
 #information.stripe {

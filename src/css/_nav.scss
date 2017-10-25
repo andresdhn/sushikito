@@ -31,7 +31,7 @@ $color-navbar-text: $color-black;
 	}
 
 	// nav-items Buttons
-	li.nav-btn {
+	li.nav__btn {
 
 		@include media('>xs') { font-size: $base-font-size * 0.95; }
 		@include media('>sm') { font-size: $base-font-size; }
@@ -49,7 +49,7 @@ $color-navbar-text: $color-black;
 		}
 	}
 
-	li.btn--red {
+	li.nav__btn--red {
 		color: $color-white;
 		background-color: $color-red-dark;
 		transition: background-color .1s ease;

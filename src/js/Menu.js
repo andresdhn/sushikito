@@ -1,3 +1,16 @@
+
+/*! 
+ * =====================================================================
+ * sushikito.fr
+ * menu.js
+ * Menu component
+ * November 2017
+ * @author:  Andres Hernandez <hernandez.andres.d@gmail.com>
+ * @copyright: sushikito.fr
+ *
+ * =====================================================================
+ */
+
 var React = require('react'); 
 var ReactDOM = require('react-dom');
 var createReactClass = require('create-react-class');

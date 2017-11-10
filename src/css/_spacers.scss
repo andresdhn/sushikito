@@ -23,6 +23,8 @@
 @include spacers ('.margin-B', margin-bottom, 6); 
 @include spacers ('.margin-L', margin-left, 6); 
 
+.margin-TBX2	{ margin-top: $space--X2; margin-bottom: $space--X2; }
+
 // Paddings
 // --------------------------------------------------------------------------
 @include spacers ('.padding-T', padding-top, 6); 

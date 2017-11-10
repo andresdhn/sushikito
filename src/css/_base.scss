@@ -46,7 +46,12 @@ article {
 	padding: 0 $space; 
 	max-width: 70rem; 
 	height: 100%;
+
+	&.container--sm {
+		max-width: 40rem;
+	}
 }
+
 
 .notfound404 {
 	#content {

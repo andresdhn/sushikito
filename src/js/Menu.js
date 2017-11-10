@@ -6,7 +6,7 @@ var Category = require('./Category');
 var Menu = createReactClass({ 
 	render() {
 		return (
-			<div>
+			<div className="container">
 				{ this.props.list.map( category => <Category key={ category.id } id={ category.id } category={category} />)} 
 			</div>
 		); 

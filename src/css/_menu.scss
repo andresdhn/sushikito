@@ -3,12 +3,12 @@
    Menu components
    ========================================================================== */
 #menu-component {
-	background-image: url('../img/mosaic3.jpg'), url('../img/mosaic4.jpg'); 
 	background-repeat: repeat-y, repeat-y; 
 	background-position: top left, top right;	
+	background-image: url('../img/mosaic3@xs.jpg'), url('../img/mosaic4@xs.jpg'); 
 
 	@include media ('>sm'){
-		background-position: top left, top right;	
+		background-image: url('../img/mosaic3.jpg'), url('../img/mosaic4.jpg'); 
 	}
 	
 }

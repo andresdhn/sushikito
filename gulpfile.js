@@ -17,7 +17,6 @@
 var gulp 			= require('gulp'),
 	gulpif  		= require('gulp-if'),
 	sass 			= require('gulp-sass'),
-	uglify			= require('gulp-uglify'),
 	htmlmin 		= require('gulp-htmlmin'),
 	imagemin		= require('gulp-imagemin'),
     sourceMaps 		= require('gulp-sourcemaps'),
@@ -26,7 +25,8 @@ var gulp 			= require('gulp'),
 var del 			= require('del'),
 	panini 			= require('panini'),
 	args    		= require('yargs').argv, 
-	webpack			= require('webpack-stream'); 
+	webpack			= require('webpack-stream'),
+	UglifyJSPlugin 	= require('uglifyjs-webpack-plugin');
 	
 // ==============================================================
 // Config
@@ -98,13 +98,17 @@ gulp.task('js', function () {
 				    	{ test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] }
 				  	]
 				},
+				plugins: gulpif(
+					isProduction, [ 
+				    	new UglifyJSPlugin({ 
+				    		 uglifyOptions: { comments: false }
+				    	})
+					]
+				),
 				output: {
 			        filename: '[name].js'
 			    }
 			})
-		)
-		.pipe(
-			gulpif(isProduction, uglify())
 		)
 		.pipe(gulp.dest(output.build + '/js/')); 
 }); 

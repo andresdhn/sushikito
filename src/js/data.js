@@ -1,6 +1,7 @@
 module.exports = [{
 	"id": 0,
 	"category": "Entreés", 
+	"img": "./img/menu/category-entrees.jpg",
 	"items": [
 		{
 			"ref":  "wakame", 
@@ -98,6 +99,7 @@ module.exports = [{
 {
 	"id": 1,
 	"category": "Classiques Rolls", 
+	"img": "./img/menu/category-classiques.jpg",
 	"items": [
 		{
 			"ref": "classiques-concombre", 
@@ -146,6 +148,7 @@ module.exports = [{
 {
 	"id": 2,
 	"category": "Sushi'kito Rolls", 
+	"img": "./img/menu/category-sushikito-rolls.jpg",
 	"items": [
 		{
 			"ref": "caracas-rolls", 
@@ -208,6 +211,7 @@ module.exports = [{
 {
 	"id": 3,
 	"category": "Sashimi", 
+	"img": "./img/menu/category-sashimi.jpg",
 	"items": [
 		{
 			"ref": "sashimi-saumon", 
@@ -242,6 +246,7 @@ module.exports = [{
 {
 	"id": 4,
 	"category": "Nigiri", 
+	"img": "./img/menu/category-nigiri.jpg",
 	"items": [
 		{
 			"ref": "nigiri-saumon", 
@@ -283,6 +288,7 @@ module.exports = [{
 {
 	"id": 5,
 	"category": "Maki", 
+	"img": "./img/menu/category-maki.jpg",
 	"items": [
 		{
 			"ref":  "maki-saumon", 
@@ -338,6 +344,7 @@ module.exports = [{
 {
 	"id": 6,
 	"category": "Desserts", 
+	"img": "./img/menu/category-desserts.jpg",
 	"items": [
 		{
 			"ref":  "cheese-cake", 

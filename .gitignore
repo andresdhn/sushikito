@@ -76,4 +76,6 @@ bower_components
 # Distribution #
 #############
 dist
+build
+
 

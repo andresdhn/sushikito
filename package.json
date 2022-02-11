@@ -7,7 +7,7 @@
     "start": "./node_modules/.bin/webpack-dev-server --hot --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Andres Hernandez <hernandez.andres.d@gmail.com>",
+  "author": "Andres Hernandez",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
